@@ -43,12 +43,12 @@ class Mage extends Hero {
 	Mage(String name) {
 		this.name = name;
 		level = 1;
-		power = 1;
-		hp = 1;
-		defense = 1;
-		mp = 1;
-		experience = 1;
-		money = 1;
+		power = 20;
+		hp = 50;
+		defense = 10;
+		mp = 30;
+		experience = 0;
+		money = 0;
 	}
 }
 
@@ -161,7 +161,70 @@ public class teatea {
 					}
 				}
 			}
+			else if (num == 3) {
+				System.out.println("수련의 방에 입장하였습니다.");
+				System.out.println("1. 몬스터 전투 훈련");
+				System.out.println("2. 명상실");
+				System.out.println("번호를 입력하세요. :");
+				num = sc.nextInt();
+				if(num == 1) {
+					System.out.println("몬스터 전투 훈련을 시작합니다.");
+					System.out.println("비용을 내고 몬스터 사냥에 성공하시면 더많은 경험치와 더 많은 돈을 드립니다.");
+					System.out.println("1. 너구리 ");
+					System.out.println("2. 살쾡이");
+					System.out.println("번호를 선택하세요");
+					Monster Training_monster1 = new Monster("너구리",300,0,1,40,5,50,50);
+					Monster Training_monster2= new Monster("살쾡이",2300,0,5,100,20,80,90);
+					num=sc.nextInt();
+					if(num == 1) {
+						hero.money-=10
+					monster = Training_monster1
+					}else if (num == 2) {
+						hero.money-=20
+					monster = Training_monster2
+					}
+					while (true) {
 
+						System.out.println(hero_name + "의 공격입니다.");
+						monster1.monster_attacked(hero.hero_defense,hero_attack());
+
+						if (monster1.monster_hp <= 0) {
+
+							System.out.println(monster_name + "가 죽었습니다.");
+							hero_experience += monster1.monster_experience;
+							hero_money += monster.monster_money;
+							break;
+						}
+
+						System.out.println(monster_name + "의 공격입니다.");
+						hero_attacked(monster.monster_attack());
+
+						if (hero_hp <= 0) {
+
+							System.out.println(hero_name + "이 죽었습니다.");
+							hero_hp = 1;
+							System.out.println(hero_name + "이 체력" + hero_hp + "으로 부활했습니다.");
+							break;
+						}
+					}
+				}else if(num ==2 ) {
+				System.out.println("명상실에 입장하였습니다.");
+				System.out.println("금액에 따라 hp, mp를 회복할 수 있습니다");
+				System.out.println("1. 의자(30회복)");
+				System.out.println("2. 소파(50회복)");
+				num = sc.nextInt();
+				TrainingRoom tr = new TrainingRoom();
+				if(num == 1) {
+					hero.money-=10;
+					hero.hp+=tr.meditationRoom(1);
+					hero.mp+=tr.meditationRoom(1);
+							
+				}else if(num ==2 ) {
+					hero.money-=20;
+					hero.hp+= tr.meditationRoom(2);
+					hero.mp+=tr.meditationRoom(2);
+				}
+			}
 			else if (num == 4) {
 				System.out.println("미니 게임에 입장하였습니다.");
 				System.out.println("1. 진짜 몬스터를 찾아라!");
