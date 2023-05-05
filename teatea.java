@@ -77,18 +77,18 @@ public class teatea {
 		if (num == 1) {
 			System.out.println("전사가 선택되었습니다.");
 			System.out.printf("영웅의 이름을 입력하세요. : ");
-			String hero.name = sc.next();
-			hero = new Warrior(hero.name);
+			String name = sc.next();
+			hero = new Warrior(name);
 		} else if (num == 2) {
 			System.out.println("마법사가 선택되었습니다.");
 			System.out.printf("영웅의 이름을 입력하세요. : ");
-			String hero.name = sc.next();
-			hero = new Mage(hero.name);
+			String name = sc.next();
+			hero = new Mage(name);
 		} else {
 			System.out.println("도적이 선택되었습니다.");
 			System.out.printf("영웅의 이름을 입력하세요. : ");
-			String hero.name = sc.next();
-			hero = new Rogue(hero.name);
+			String name = sc.next();
+			hero = new Rogue(name);
 		}
 		
 		System.out.println("이름이 입력되었습니다.");
