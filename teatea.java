@@ -244,7 +244,7 @@ public class teatea {
 				
 			else if (num == 5) {
 				System.out.println("무기 상점에 입장하였습니다.");
-				System.out.println("무기를 구매할 직업군을 선택해주세요.");
+				System.out.println("구매할 무기의 직업군을 선택해주세요.");
 				System.out.println("1. 전사");
 				System.out.println("2. 마법사");
 				System.out.println("3. 도적");
@@ -300,14 +300,17 @@ public class teatea {
 	}else if(num==5)
 	{
 		System.out.println("무기 상점에 입장하였습니다.");
-		System.out.println("1. 뾰족한 단검 (50원)");
-		System.out.println("2. 청룡도 (150원)");
-		System.out.println("3. 흑룡검 (200원)");
-		System.out.printf("원하시는 물건을 입력하세요. : ");
-		num = sc.nextInt();
-		int temp = hero_money;
-
-
+	        WeaponShop shop = new WeaponShop();
+	        WeaponShop shop = new WeaponShop();
+	        shop.showWeapons();
+	
+	        Scanner scanner = new Scanner(System.in);
+	        System.out.println("구매할 무기의 번호를 입력하세요. :");
+	        int weaponIndex = scanner.nextInt();
+	
+	        shop.purchaseWeapon(weaponIndex);
+	        scanner.close();
+	}
 			if (hero_experience >= hero_level * 80) {
 				hero_level += 1;
 				System.out.println(hero_name + "의 레벨이" + hero_level + "이 되었습니다.");
@@ -372,14 +375,16 @@ public class teatea {
 //		}
 //	}
 
+	if(monster_defense>=sum)
 
-		if (monster_defense >= sum) {
-			monster_hp = monster_hp - 0;
-		} else {
-			monster_hp = monster_hp + monster_defense - sum;
-		}
+	{
+		monster_hp = monster_hp - 0;
+	}else
+	{
+		monster_hp = monster_hp + monster_defense - sum;
 	}
-	
+	}
+
 	static void mini_game_1(int chances, int randomNumber) {
 		Scanner scanner = new  Scanner(System.in);
 		
@@ -412,7 +417,7 @@ public class teatea {
 		}
 		System.out.printf("아쉽습니다. 정답은 %d였습니다.\n", randomNumber);
 	}
-	
+
 	static int armorStore_show(int money, int num) {
 		int 
 	}
