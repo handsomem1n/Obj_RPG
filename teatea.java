@@ -1,6 +1,7 @@
 package objectorientation;
 
 import java.util.Scanner;
+import java.util.Random;
 
 abstract class Hero {
 	String name;
@@ -82,18 +83,18 @@ public class teatea {
 		if (num == 1) {
 			System.out.println("전사가 선택되었습니다.");
 			System.out.printf("영웅의 이름을 입력하세요. : ");
-			String hero.name = sc.next();
-			hero = new Warrior(hero.name);
+			String name = sc.next();
+			hero = new Warrior(name);
 		} else if (num == 2) {
 			System.out.println("마법사가 선택되었습니다.");
 			System.out.printf("영웅의 이름을 입력하세요. : ");
-			String hero.name = sc.next();
-			hero = new Mage(hero.name);
+			String name = sc.next();
+			hero = new Mage(name);
 		} else {
 			System.out.println("도적이 선택되었습니다.");
 			System.out.printf("영웅의 이름을 입력하세요. : ");
-			String hero.name = sc.next();
-			hero = new Rogue(hero.name);
+			String name = sc.next();
+			hero = new Rogue(name);
 		}
 		
 		System.out.println("이름이 입력되었습니다.");
@@ -160,6 +161,35 @@ public class teatea {
 					}
 				}
 			}
+
+			else if (num == 4) {
+				System.out.println("미니 게임에 입장하였습니다.");
+				System.out.println("1. 진짜 몬스터를 찾아라!");
+				System.out.println("2. 몬스터와의 가위바위보에서 이겨라!");
+				System.out.printf("번호를 입력하세요. : ");
+				num = sc.nextInt();
+				
+				if (num == 1) {
+					int chances = 3;
+					int randomNumber = new Random().nextInt(10) + 1;
+					mini_game_1(chances, randomNumber);
+				}
+				if (num == 2) {
+					
+				}
+				
+				
+			else if (num == 5) {
+				System.out.println("무기 상점에 입장하였습니다.");
+				System.out.println("1. 뾰족한 단검 (50원)");
+				System.out.println("2. 청룡도 (150원)");
+				System.out.println("3. 흑룡검 (200원)");
+				System.out.printf("원하시는 물건을 입력하세요. : ");
+				num = sc.nextInt();
+				int temp = hero_money;
+
+				
+
 			}
 		}else if(num==2)
 
@@ -200,6 +230,17 @@ public class teatea {
 		System.out.printf("원하시는 물건을 입력하세요. : ");
 		num = sc.nextInt();
 		int temp = hero_money;
+
+
+			if (hero_experience >= hero_level * 80) {
+				hero_level += 1;
+				System.out.println(hero_name + "의 레벨이" + hero_level + "이 되었습니다.");
+				hero_money += hero_level * 50;
+				System.out.println("레업 기념으로 돈이 " + hero_level * 50 + "원 증가하여 ");
+				System.out.println(hero_money + "원이 되었습니다.");
+				hero_experience = 0;
+			}
+		}	
 
 	}
 
@@ -255,6 +296,47 @@ public class teatea {
 //		}
 //	}
 
+
+		if (monster_defense >= sum) {
+			monster_hp = monster_hp - 0;
+		} else {
+			monster_hp = monster_hp + monster_defense - sum;
+		}
+	}
+	
+	static void mini_game_1(int chances, int randomNumber) {
+		Scanner scanner = new  Scanner(System.in);
+		
+		System.out.println("게임 설명 : 몬스터 10마리 중 진짜를 찾으세요!");
+		System.out.println("몬스터 1");
+		System.out.println("몬스터 2");
+		System.out.println("몬스터 3");
+		System.out.println("몬스터 4");
+		System.out.println("몬스터 5");
+		System.out.println("몬스터 6");
+		System.out.println("몬스터 7");
+		System.out.println("몬스터 8");
+		System.out.println("몬스터 9");
+		System.out.println("몬스터 10");
+		
+		while (chances > 0) {
+			System.out.printf("기회가 %d번 있습니다! 몬스터 번호를 입력해주세요. : ", chances);
+			int guess = scanner.nextInt();
+			
+			if (guess == randomNumber) {
+				System.our.println("축하합니다! 진짜 몬스터를 찾았네요!");
+				// 돈 증가
+				return;
+			} else if (guess > randomNumber) {
+				System.out.println("선택하신 몬스터 번호보다 큰 몬스터입니다!");
+			} else {
+				System.out.println("선택하신 몬스터 번호보다 작은 몬스터입니다!");
+			}
+			chances--;
+		}
+		System.out.printf("아쉽습니다. 정답은 %d였습니다.\n", randomNumber);
+	}
+	
 	static int armorStore_show(int money, int num) {
 		int 
 	}
