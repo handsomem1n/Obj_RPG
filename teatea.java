@@ -1,7 +1,8 @@
 package objectorientation;
+
 import java.util.Scanner;
 
-abstract class Hero{
+abstract class Hero {
 	String name;
 	int level;
 	int power;
@@ -10,18 +11,20 @@ abstract class Hero{
 	int mp;
 	int experience;
 	int money;
-	
+
 	int attack() {
 		return level * 10 + power * 20;
 	}
+
 	void attacked(int sum) {
 		if (defense >= sum) {
 			hp = hp - 0;
-		}else {
-			hp =hp + defense - sum;
+		} else {
+			hp = hp + defense - sum;
 		}
 	}
 }
+
 class Warrior extends Hero {
 	Warrior(String name) {
 		this.name = name;
@@ -30,10 +33,11 @@ class Warrior extends Hero {
 		hp = 1;
 		defense = 1;
 		mp = 1;
-		experience = 1; 
+		experience = 1;
 		money = 1;
 	}
 }
+
 class Mage extends Hero {
 	Mage(String name) {
 		this.name = name;
@@ -42,10 +46,11 @@ class Mage extends Hero {
 		hp = 1;
 		defense = 1;
 		mp = 1;
-		experience = 1; 
+		experience = 1;
 		money = 1;
 	}
 }
+
 class Rogue extends Hero {
 	Rogue(String name) {
 		this.name = name;
@@ -54,16 +59,17 @@ class Rogue extends Hero {
 		hp = 60;
 		defense = 15;
 		mp = 10;
-		experience = 0; 
+		experience = 0;
 		money = 0;
 	}
 }
 
 public class teatea {
 	static int hero_level, hero_power, hero_hp, hero_defense, hero_mp, hero_experience, hero_money;
-	static int monster_hp, monster_defense, monster_power, monster_mp, monster_level, monster_experience, monster_money;
+	// static int monster_hp, monster_defense, monster_power, monster_mp,
+	// monster_level, monster_experience, monster_money;
 	static String hero_name, monster_name;
-	
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("*******RPG GAME*******");
@@ -118,44 +124,32 @@ public class teatea {
 				System.out.println("1. 너구리");
 				System.out.println("2. 살쾡이");
 				System.out.printf("전투할 상대를 입력하세요. : ");
+				Monster monster1 = new Monster("너구리",100,0,1,20,5,10,10);
+				Monster monster2= new Monster("살쾡이",2000,0,5,100,20,30,50);
 				num = sc.nextInt();
-
+				
 				if (num == 1) {
-					monster_name = "너구리";
-					monster_hp = 100;
-					monster_mp = 0;
-					monster_level = 1;
-					monster_power = 20;
-					monster_defense = 5;
-					monster_money = 10;
-					monster_experience = 10;
+					Monster monster = monster1;
 				}
 				if (num == 2) {
-					monster_name = "살쾡이";
-					monster_hp = 2000;
-					monster_mp = 0;
-					monster_level = 5;
-					monster_power = 100;
-					monster_defense = 20;
-					monster_money = 30;
-					monster_experience = 50;
+					Monster monster = monster2;
 				}
-				System.out.println(monster_name + "과 전투를 시작합니다.");
+				System.out.println(monster1.monster_name + "과 전투를 시작합니다.");
 				while (true) {
 
 					System.out.println(hero_name + "의 공격입니다.");
-					monster_attacked(hero_attack());
+					monster1.monster_attacked(hero.hero_defense,hero_attack());
 
-					if (monster_hp <= 0) {
+					if (monster1.monster_hp <= 0) {
 
 						System.out.println(monster_name + "가 죽었습니다.");
-						hero_experience += monster_experience;
-						hero_money += monster_money;
+						hero_experience += monster1.monster_experience;
+						hero_money += monster1.monster_money;
 						break;
 					}
 
 					System.out.println(monster_name + "의 공격입니다.");
-					hero_attacked(monster_attack());
+					hero_attacked(monster1.monster_attack());
 
 					if (hero_hp <= 0) {
 
@@ -165,53 +159,61 @@ public class teatea {
 						break;
 					}
 				}
-			} else if (num == 2) {
-				System.out.println("포션 상점에 입장하였습니다.");
-				System.out.println("1. 힘 증강 포션 (30원)");
-				System.out.println("2. 방어력 증강 포션 (30원)");
-				System.out.println("3. 경험치 증강 포션 (100원)");
-				System.out.println("4. HP 증강 포션 (10원)");
-				System.out.println("5. MP 증강 포션 (10원)");
-				System.out.printf("원하시는 물건을 입력하세요. : ");
-				num = sc.nextInt();
-				int temp = hero_money;
-				if ((temp = potionStore_show(temp, num)) != -1) {
-					System.out.println("구입이 완료되었습니다.");
-					if (num == 1) hero_power += 3;
-					if (num == 2) hero_defense += 3;
-					if (num == 3) hero_experience += 50;
-					if (num == 4) hero_hp += 50;
-					if (num == 5) hero_mp += 50;
-					hero_money = temp;
-					System.out.println(hero_money + "원 남았습니다.");
-				} else {
-					System.out.println("돈이 부족합니다.");
-					System.out.println(hero_money + "원 남았습니다.");
-				}
 			}
-			else if (num == 5) {
-				System.out.println("무기 상점에 입장하였습니다.");
-				System.out.println("1. 뾰족한 단검 (50원)");
-				System.out.println("2. 청룡도 (150원)");
-				System.out.println("3. 흑룡검 (200원)");
-				System.out.printf("원하시는 물건을 입력하세요. : ");
-				num = sc.nextInt();
-				int temp = hero_money;
+			}
+		}else if(num==2)
 
-				
-			}
+	{
+		System.out.println("포션 상점에 입장하였습니다.");
+		System.out.println("1. 힘 증강 포션 (30원)");
+		System.out.println("2. 방어력 증강 포션 (30원)");
+		System.out.println("3. 경험치 증강 포션 (100원)");
+		System.out.println("4. HP 증강 포션 (10원)");
+		System.out.println("5. MP 증강 포션 (10원)");
+		System.out.printf("원하시는 물건을 입력하세요. : ");
+		num = sc.nextInt();
+		int temp = hero_money;
+		if ((temp = potionStore_show(temp, num)) != -1) {
+			System.out.println("구입이 완료되었습니다.");
+			if (num == 1)
+				hero_power += 3;
+			if (num == 2)
+				hero_defense += 3;
+			if (num == 3)
+				hero_experience += 50;
+			if (num == 4)
+				hero_hp += 50;
+			if (num == 5)
+				hero_mp += 50;
+			hero_money = temp;
+			System.out.println(hero_money + "원 남았습니다.");
+		} else {
+			System.out.println("돈이 부족합니다.");
+			System.out.println(hero_money + "원 남았습니다.");
+		}
+	}else if(num==5)
+	{
+		System.out.println("무기 상점에 입장하였습니다.");
+		System.out.println("1. 뾰족한 단검 (50원)");
+		System.out.println("2. 청룡도 (150원)");
+		System.out.println("3. 흑룡검 (200원)");
+		System.out.printf("원하시는 물건을 입력하세요. : ");
+		num = sc.nextInt();
+		int temp = hero_money;
 
-			if (hero_experience >= hero_level * 80) {
-				hero_level += 1;
-				System.out.println(hero_name + "의 레벨이" + hero_level + "이 되었습니다.");
-				hero_money += hero_level * 50;
-				System.out.println("레밸업 기념으로 돈이 " + hero_level * 50 + "원 증가하여 ");
-				System.out.println(hero_money + "원이 되었습니다.");
-				hero_experience = 0;
-			}
-		}	
 	}
-	
+
+	if(hero_experience>=hero_level*80)
+	{
+		hero_level += 1;
+		System.out.println(hero_name + "의 레벨이" + hero_level + "이 되었습니다.");
+		hero_money += hero_level * 50;
+		System.out.println("레밸업 기념으로 돈이 " + hero_level * 50 + "원 증가하여 ");
+		System.out.println(hero_money + "원이 되었습니다.");
+		hero_experience = 0;
+	}
+	}}
+
 	static int hero_attack() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("1. 쓰러스트");
@@ -238,24 +240,25 @@ public class teatea {
 		}
 	}
 
-	static int monster_attack() {
-		System.out.println("데미지는 " + monster_power + " 입니다.");
-		return monster_power;
+//	static int monster_attack() {
+//		System.out.println("데미지는 " + monster_power + " 입니다.");
+//		return monster_power;
+//
+//	}
 
-	}
+//	static void monster_attacked(int sum) {
+//
+//		if (monster_defense >= sum) {
+//			monster_hp = monster_hp - 0;
+//		} else {
+//			monster_hp = monster_hp + monster_defense - sum;
+//		}
+//	}
 
-	static void monster_attacked(int sum) {
-
-		if (monster_defense >= sum) {
-			monster_hp = monster_hp - 0;
-		} else {
-			monster_hp = monster_hp + monster_defense - sum;
-		}
-	}
 	static int armorStore_show(int money, int num) {
 		int 
 	}
-	
+
 	static int potionStore_show(int money, int num) {
 		int powerPotion = 30;
 		int defensePotion = 30;
@@ -265,26 +268,35 @@ public class teatea {
 		String name = "포션 상점";
 		System.out.println(name + "에서 물건을 구매 시도하는 중입니다.");
 		if (num == 1) {
-			if (powerPotion <= money) return money - powerPotion;
-			else return -1;
+			if (powerPotion <= money)
+				return money - powerPotion;
+			else
+				return -1;
 		}
 		if (num == 2) {
-			if (defensePotion <= money) return money - defensePotion;
-			else return -1;
+			if (defensePotion <= money)
+				return money - defensePotion;
+			else
+				return -1;
 		}
 		if (num == 3) {
-			if (experiencePotion <= money) return money - experiencePotion;
-			else return -1;
+			if (experiencePotion <= money)
+				return money - experiencePotion;
+			else
+				return -1;
 		}
 		if (num == 4) {
-			if (hpPotion <= money) return money - hpPotion;
-			else return -1;
+			if (hpPotion <= money)
+				return money - hpPotion;
+			else
+				return -1;
 		}
 		if (num == 5) {
-			if (mpPotion <= money) return money - mpPotion;
-			else return -1;
+			if (mpPotion <= money)
+				return money - mpPotion;
+			else
+				return -1;
 		}
 		return money;
 	}
 }
-
