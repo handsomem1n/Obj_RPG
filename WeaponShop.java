@@ -9,7 +9,6 @@ public class WeaponShop {
 
     public WeaponShop() {
         weapons = new ArrayList<>();
-        // Add some weapons
         weapons.add(new Weapon("Sword", 100, 20));
         weapons.add(new Weapon("Staff", 80, 20));
         weapons.add(new Weapon("Dagger", 50, 20));
