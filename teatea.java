@@ -181,15 +181,28 @@ public class teatea {
 				
 			else if (num == 5) {
 				System.out.println("무기 상점에 입장하였습니다.");
-				System.out.println("1. 뾰족한 단검 (50원)");
-				System.out.println("2. 청룡도 (150원)");
-				System.out.println("3. 흑룡검 (200원)");
+				System.out.println("무기를 구매할 직업군을 선택해주세요.");
+				System.out.println("1. 전사");
+				System.out.println("2. 마법사");
+				System.out.println("3. 도적");
+				int store_num = sc.nextInt();
+				switch (store_num) {
+				case 1:
+					System.out.println("전사 상점 입장.");
+					// Armor Store클래스 중 전사 (상속의 개념)
+				case 2:
+					System.out.println("마법사 상점 입장.");
+					// Armor Store클래스 중 마법사 (상속의 개념)
+				case 3:
+					System.out.println("도적 상점 입장.");
+					// Armor Store클래스 중 도적 (상속의 개념)
+				}
+//				System.out.println("1. 뾰족한 단검 (50원)");
+//				System.out.println("2. 청룡도 (150원)");
+//				System.out.println("3. 흑룡검 (200원)");
 				System.out.printf("원하시는 물건을 입력하세요. : ");
 				num = sc.nextInt();
 				int temp = hero_money;
-
-				
-
 			}
 		}else if(num==2)
 
