@@ -1,5 +1,3 @@
-package SOandRU;
-
 public class WeaponShop {
 	private ArrayList<Weapon> weapons;
 
