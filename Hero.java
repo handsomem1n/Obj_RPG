@@ -75,6 +75,22 @@ public class Hero {
     public void setMoney(int money) {
         this.money = money;
     }
+
+    int attack() {
+		return level * 10 + power * 20;
+	}
+    
+    void attacked(int sum) {
+    if (defense >= sum) {
+        // 체력변화 x
+    } else {
+        hp = hp + defense - sum;
+        if (hp < 0) { // hp 0이하 방지
+            hp = 0;
+        }
+    }
+}
+    
 }
 // 직업 클래스
 public class Warrior extends Hero {
