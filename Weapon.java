@@ -1,25 +1,35 @@
-package SOandRU;
+public abstract class Weapon {
+    protected String name;
+    protected int damage;
 
-public class Weapon{
-	private String name;
-	private int damage;
-	private int cost;
+    public Weapon(String name, int damage) {
+        this.name = name;
+        this.damage = damage;
+    }
 
-	public Weapon(String name, int damage, int cost) {
-		this.name = name;
-		this.damage = damage;
-		this.cost = cost;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public int getDamage() {
+        return damage;
+    }
+}
 
-	public int getDamage() {
-		return damage;
-	}
+class WizardWeapon extends Weapon {
+    public WizardWeapon() {
+        super("위자드 스테프", 35);
+    }
+}
 
-	public int getCost() {
-		return cost;
-	}
+class WarriorWeapon extends Weapon {
+    public WarriorWeapon() {
+        super("청룡 대검", 50);
+    }
+}
+
+class RogueWeapon extends Weapon {
+    public RogueWeapon() {
+        super("포이즌 단검", 40);
+    }
 }
