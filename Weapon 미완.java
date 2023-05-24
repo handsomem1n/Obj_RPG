@@ -17,6 +17,11 @@ public abstract class Weapon {
     public int getDamage() {
         return damage;
     }
+    
+    public int getPrice() {
+        return price;
+    }
+    
 }
 
 class WizardWeapon1 extends Weapon {
