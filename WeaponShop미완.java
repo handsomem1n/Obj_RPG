@@ -13,8 +13,9 @@ public class WeaponShop {
     }
     // Fin.무기 상점을 생성하고, 무기를 추가하는 기능. (추가된 무기들은 weapons 리스트에 저장되어 상점의 무기 목록으로 관리됨)
     
+    // 무기 구매
     public void buyWeapon(Hero hero, String weaponName) {
-        Weapon weaponToBuy = null;
+        Weapon weaponToBuy = null; // 에러 방지의 일환 예외 처리
         for (Weapon weapon : weapons) {
             if (weapon.getName().equals(weaponName)) {
                 weaponToBuy = weapon;
