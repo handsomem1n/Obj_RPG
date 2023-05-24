@@ -17,3 +17,16 @@ public class WeaponShop {
         }
     }
 }
+/*
+public class Main {
+    public static void main(String[] args) {
+        WeaponStore weaponStore = new WeaponStore();
+
+        weaponStore.addWeapon(new WizardWeapon());
+        weaponStore.addWeapon(new WarriorWeapon());
+        weaponStore.addWeapon(new RogueWeapon());
+
+        weaponStore.displayWeapons();
+    }
+}
+*/
