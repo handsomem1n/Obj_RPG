@@ -1,4 +1,5 @@
 public abstract class Weapon {
+// 무기와 관련한 정보 : 이름, 데미지, 가격
     protected String name;
     protected int damage;
     protected int price;
