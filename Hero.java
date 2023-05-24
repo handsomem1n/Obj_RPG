@@ -10,6 +10,8 @@ public class Hero {
 
     public Hero(String name) {
         this.name = name;
+        this.level = 1; // 초기 레벨
+        this.money = 0; // 초기 보유금액
     }
 
     public String getName() {
@@ -77,57 +79,51 @@ public class Hero {
     }
 
     int attack() {
-		return level * 10 + power * 20;
-	}
+        return level * 10 + power * 20;
+    }
     
     void attacked(int sum) {
-    if (defense >= sum) {
-        // 체력변화 x
-    } else {
-        hp = hp + defense - sum;
-        if (hp < 0) { // hp 0이하 방지
-            hp = 0;
+        if (defense >= sum) {
+            // 체력변화 x
+        } else {
+            hp = hp + defense - sum;
+            if (hp < 0) { // hp 0이하 방지
+                hp = 0;
+            }
         }
     }
 }
-    
-}
+
 // 직업 클래스
 public class Warrior extends Hero {
     public Warrior(String name) {
         super(name);
-        this.level = 1;
         this.power = 15;
         this.hp = 90;
         this.defense = 30;
         this.mp = 10;
         this.experience = 0;
-        this.money = 0;
     }
 }
 
 public class Mage extends Hero {
     public Mage(String name) {
         super(name);
-        this.level = 1;
         this.power = 20;
         this.hp = 50;
         this.defense = 10;
         this.mp = 30;
         this.experience = 0;
-        this.money = 0;
     }
 }
 
 public class Rogue extends Hero {
     public Rogue(String name) {
         super(name);
-        this.level = 1;
         this.power = 25;
         this.hp = 60;
         this.defense = 15;
         this.mp = 10;
         this.experience = 0;
-        this.money = 0;
     }
 }
