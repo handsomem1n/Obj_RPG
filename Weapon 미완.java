@@ -1,10 +1,12 @@
 public abstract class Weapon {
     protected String name;
     protected int damage;
-
-    public Weapon(String name, int damage) {
+    protected int price;
+    
+    public Weapon(String name, int damage, int price) {
         this.name = name;
         this.damage = damage;
+        this.price = price;
     }
 
     public String getName() {
@@ -18,18 +20,18 @@ public abstract class Weapon {
 
 class WizardWeapon extends Weapon {
     public WizardWeapon() {
-        super("위자드 스테프", 35);
+        super("위자드 스테프", 20, 100);
     }
 }
 
 class WarriorWeapon extends Weapon {
     public WarriorWeapon() {
-        super("청룡 대검", 50);
+        super("청룡 대검", 20, 100);
     }
 }
 
 class RogueWeapon extends Weapon {
     public RogueWeapon() {
-        super("포이즌 단검", 40);
+        super("포이즌 단검", 25, 110);
     }
 }
