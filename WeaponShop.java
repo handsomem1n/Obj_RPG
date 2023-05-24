@@ -20,13 +20,13 @@ public class WeaponShop {
 /*
 public class Main {
     public static void main(String[] args) {
-        WeaponStore weaponStore = new WeaponStore();
+        WeaponShop weaponShop = new WeaponShop();
 
-        weaponStore.addWeapon(new WizardWeapon());
-        weaponStore.addWeapon(new WarriorWeapon());
-        weaponStore.addWeapon(new RogueWeapon());
+        weaponShop.addWeapon(new WizardWeapon());
+        weaponShop.addWeapon(new WarriorWeapon());
+        weaponShop.addWeapon(new RogueWeapon());
 
-        weaponStore.displayWeapons();
+        weaponShop.displayWeapons();
     }
 }
 */
