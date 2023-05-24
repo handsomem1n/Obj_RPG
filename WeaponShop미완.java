@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class WeaponShop {
     private ArrayList<Weapon> weapons;
 
-    // 무기 상점을 생성하고, 무기를 추가하는 기능. Srt
+    //start. 무기 상점을 생성하고, 무기를 추가하는 기능.
     public WeaponShop() { // 매개변수 없는 생성자(WeaponShop()), 이 생성자는 ArrayList인 weapons를 초기화
         this.weapons = new ArrayList<>(); // 빈 ArrayList를 생성하여 weapons에 할당
     }
@@ -11,7 +11,8 @@ public class WeaponShop {
     public void addWeapon(Weapon weapon) { // Weapon 객체를 매개변수로 받아서 weapons 리스트에 추가
         this.weapons.add(weapon); // this : WeaponShop객체 지칭, weapons : WeaponShop 객체의 멤버변수 지칭 => Weapon 객체를 weapons 리스트에 추가
     }
-    // 무기 상점을 생성하고, 무기를 추가하는 기능. (추가된 무기들은 weapons 리스트에 저장되어 상점의 무기 목록으로 관리됨) fin
+    // Fin.무기 상점을 생성하고, 무기를 추가하는 기능. (추가된 무기들은 weapons 리스트에 저장되어 상점의 무기 목록으로 관리됨)
+    
     public void buyWeapon(Hero hero, String weaponName) {
         Weapon weaponToBuy = null;
         for (Weapon weapon : weapons) {
