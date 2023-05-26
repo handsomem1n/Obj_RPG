@@ -1,3 +1,4 @@
+package soandruRPG;
 // package SOandRU;
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package SOandRU;
+package soandruRPG;
 
 import java.util.Scanner;
 import java.util.Random;

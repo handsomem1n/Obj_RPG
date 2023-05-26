@@ -1,3 +1,4 @@
+package soandruRPG;
 public class Hero {
     String name;
     int level;
