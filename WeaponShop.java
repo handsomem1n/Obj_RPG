@@ -1,3 +1,6 @@
+// package SOandRU;
+import java.util.ArrayList;
+
 public class WeaponShop {
 	private ArrayList<Weapon> weapons;
 
