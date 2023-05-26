@@ -15,7 +15,8 @@ public class WeaponShop {
 		this.weapons.add(WeaponFactory.createRogueWeapon1());
 		this.weapons.add(WeaponFactory.createRogueWeapon2());
 	}
-
+	
+// 리스트 등록에 번거로움으로 무기 구매를 번호로 입력받지않고 등록된 무기리스트와 동일한 문자열을 입력하게 하여 구매
 	public void buyWeapon(Hero hero, String weaponName) {
 		Weapon weaponToBuy = null; // 에러 방지의 일환 예외 처리
 		for (Weapon weapon : weapons) {
