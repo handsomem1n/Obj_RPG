@@ -8,7 +8,7 @@ public class WeaponShop {
 	public WeaponShop() {
 		this.weapons = new ArrayList<>(); // 상점이 보유한 무기들을 저장하기 위한 리스트
 
-		// 팩토리에서 무기를 가져와 추가(상점에 들를때마다 무기 재고 채워지게 우선 구현)
+		// 팩토리에서 무기를 가져와 추가(상점에 들릴때마다 무기 재고 채워지게 우선 구현)
 		this.weapons.add(WeaponFactory.createWizardWeapon1());
 		this.weapons.add(WeaponFactory.createWizardWeapon2());
 		this.weapons.add(WeaponFactory.createWarriorWeapon1());
