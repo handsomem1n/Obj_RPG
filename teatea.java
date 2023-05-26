@@ -1,4 +1,4 @@
-package objectorientation;
+package SOandRU;
 
 import java.util.Scanner;
 import java.util.Random;
