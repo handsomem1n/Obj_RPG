@@ -1,3 +1,4 @@
+package soandruRPG;
 // 히어로 어택 클래스를 따로 만들려고 했는데 이미 hero 클래스에서 공격과 사용을 만드신 것같아 일단 코드만 올려보겠습니다.
 public class HeroAttack {
 	private int skill;

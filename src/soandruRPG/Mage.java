@@ -1,3 +1,4 @@
+package soandruRPG;
 // package SOandRU;
 
 public class Mage extends Hero {
