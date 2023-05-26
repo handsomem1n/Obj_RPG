@@ -3,6 +3,7 @@ package objectorientation;
 import java.util.Scanner;
 import java.util.Random;
 
+/*
 abstract class Hero {
 	String name;
 	int level;
@@ -64,7 +65,7 @@ class Rogue extends Hero {
 		money = 0;
 	}
 }
-
+*/
 public class teatea {
 	static int hero_level, hero_power, hero_hp, hero_defense, hero_mp, hero_experience, hero_money;
 	// static int monster_hp, monster_defense, monster_power, monster_mp,
