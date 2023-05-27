@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class mini_game2 {
+public class mini_game_2 {
     public static void main(String[] args) {
         String[] choices = {"가위", "바위", "보"};
 
