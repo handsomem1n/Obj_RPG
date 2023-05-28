@@ -1,98 +1,103 @@
 package soandruRPG;
+
+import java.util.HashMap;
+
 public class Hero {
-    String name;
-    int level;
-    int power;
-    int hp;
-    int defense;
-    int mp;
-    int experience;
-    int money;
 
-    public Hero(String name) {
-        this.name = name;
-        this.level = 1; // 초기 레벨
-        this.money = 0; // 초기 보유금액
-    }
+	String name;
+	int level;
+	int power;
+	int hp;
+	int defense;
+	int mp;
+	int experience;
+	int money;
+	HashMap<String, Integer> inventory = new HashMap<>();
 
-    public String getName() {
-        return this.name;
-    }
+	public Hero(String name) {
+		this.name = name;
+		this.level = 1; // 초기 레벨
+		this.money = 0; // 초기 보유금액
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return this.name;
+	}
 
-    public int getLevel() {
-        return this.level;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setLevel(int level) {
-        this.level = level;
-    }
+	public int getLevel() {
+		return this.level;
+	}
 
-    public int getPower() {
-        return this.power;
-    }
+	public void setLevel(int level) {
+		this.level = level;
+	}
 
-    public void setPower(int power) {
-        this.power = power;
-    }
+	public int getPower() {
+		return this.power;
+	}
 
-    public int getHp() {
-        return this.hp;
-    }
+	public void setPower(int power) {
+		this.power = power;
+	}
 
-    public void setHp(int hp) {
-        this.hp = hp;
-    }
+	public int getHp() {
+		return this.hp;
+	}
 
-    public int getDefense() {
-        return this.defense;
-    }
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
 
-    public void setDefense(int defense) {
-        this.defense = defense;
-    }
+	public int getDefense() {
+		return this.defense;
+	}
 
-    public int getMp() {
-        return this.mp;
-    }
+	public void setDefense(int defense) {
+		this.defense = defense;
+	}
 
-    public void setMp(int mp) {
-        this.mp = mp;
-    }
+	public int getMp() {
+		return this.mp;
+	}
 
-    public int getExperience() {
-        return this.experience;
-    }
+	public void setMp(int mp) {
+		this.mp = mp;
+	}
 
-    public void setExperience(int experience) {
-        this.experience = experience;
-    }
+	public int getExperience() {
+		return this.experience;
+	}
 
-    public int getMoney() {
-        return this.money;
-    }
+	public void setExperience(int experience) {
+		this.experience = experience;
+	}
 
-    public void setMoney(int money) {
-        this.money = money;
-    }
+	public int getMoney() {
+		return this.money;
+	}
 
-    int attack() {
-        return level * 10 + power * 20;
-    }
-    
-    void attacked(int sum) {
-        if (defense >= sum) {
-            // 체력변화 x
-        } else {
-            hp = hp + defense - sum;
-            if (hp < 0) { // hp 0이하 방지
-                hp = 0;
-            }
-        }
-    }
+	public void setMoney(int money) {
+		this.money = money;
+	}
+
+	int attack() {
+		return level * 10 + power * 20;
+	}
+
+	void attacked(int sum) {
+		if (defense >= sum) {
+			// 체력변화 x
+		} else {
+			hp = hp + defense - sum;
+			if (hp < 0) { // hp 0이하 방지
+				hp = 0;
+			}
+		}
+	}
 }
 
 // 직업 클래스
