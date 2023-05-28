@@ -1,4 +1,5 @@
 package soandruRPG;
+
 import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -68,10 +69,13 @@ public class MeditationRoom {
 
 	public static void main(String[] args) {
 		int meditationHpMp[];
+		Mage h = new Mage("nam");
 		MeditationRoom s = new MeditationRoom();
 		meditationHpMp = s.meditation();
-		System.out.println(meditationHpMp[0]);
-		System.out.println(meditationHpMp[1]);
+		System.out.println("hp " + meditationHpMp[0] + " 회복");
+		h.hp += meditationHpMp[0];
+		System.out.println("mp " + meditationHpMp[1] + " 회복");
+		h.mp += meditationHpMp[1];
 
 	}
 

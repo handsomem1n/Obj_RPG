@@ -1,10 +1,10 @@
 package soandruRPG;
+
 public class Monster {
 	String monster_name, item;
 	int monster_hp, monster_defense, monster_power, monster_mp, monster_level, monster_experience, monster_money;
 
 	public int monster_attack() {
-		System.out.println("데미지는 " + monster_power + " 입니다.");
 		return monster_power;
 
 	}
@@ -61,7 +61,7 @@ class Monster2 extends Monster {
 class Training_Monster2 extends Monster {
 	public Training_Monster2() {
 		monster_name = "강화된 살쾡이";
-		monster_hp = 3500;
+		monster_hp = 3000;
 		monster_defense = 35;
 		monster_power = 150;
 		monster_mp = 0;

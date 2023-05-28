@@ -170,7 +170,7 @@ public class teatea {
 				num = sc.nextInt();
 				if(num == 1) {
 					System.out.println("몬스터 전투 훈련을 시작합니다.");
-					System.out.println("비용을 내고 몬스터 사냥에 성공하시면 더많은 경험치와 더 많은 돈을 드립니다.");
+					System.out.println("비용을 내고 몬스터 사냥에 성공하시면 더많은 경험치를 드립니다.");
 					System.out.println("1. 너구리 ");
 					System.out.println("2. 살쾡이");
 					System.out.println("번호를 선택하세요");
@@ -421,41 +421,41 @@ public class teatea {
 
 	public class mini_game_2 {
 
-	    public static void main(String[] args) {
-		String[] choices = {"가위", "바위", "보"};
+		public static void main(String[] args) {
+			String[] choices = { "가위", "바위", "보" };
 
-		Scanner scanner = new Scanner(System.in);
-		Random random = new Random();
+			Scanner scanner = new Scanner(System.in);
+			Random random = new Random();
 
-		System.out.println("게임 설명 : 몬스터와의 가위바위보 게임에서 이기세요!");
-		while(true) {
-		    System.out.print("가위바위보! (가위 = 0, 바위 = 1, 보 = 2) : ");
-		    int heroChoice = scanner.nextInt();
+			System.out.println("게임 설명 : 몬스터와의 가위바위보 게임에서 이기세요!");
+			while (true) {
+				System.out.print("가위바위보! (가위 = 0, 바위 = 1, 보 = 2) : ");
+				int heroChoice = scanner.nextInt();
 
-		    if (heroChoice < 0 || heroChoice > 2) {
-			System.out.println("잘못된 입력입니다! 다시 입력하세요.");
-			continue;
-		    }
+				if (heroChoice < 0 || heroChoice > 2) {
+					System.out.println("잘못된 입력입니다! 다시 입력하세요.");
+					continue;
+				}
 
-		    int monsterChoice = random.nextInt(3);
-		    System.out.println("영웅 : " + choices[heroChoice] + " vs. 몬스터 : " + choices[monsterChoice]);
-		    int result = (heroChoice - monsterChoice + 3) % 3;
-		    if (result == 0) {
-			System.out.println("비겼습니다.");
-		    } else if (result == 1) {
-			System.out.println("몬스터가 이겼습니다.");
-		    } else {
-			System.out.println("영웅이 이겼습니다!");
-		    }
-		    System.out.print("계속 하시겠습니까? (예=1, 아니오=0): ");
-		    int playAgain = scanner.nextInt();
-		    if (playAgain == 0) {
-			break;
-		    }
+				int monsterChoice = random.nextInt(3);
+				System.out.println("영웅 : " + choices[heroChoice] + " vs. 몬스터 : " + choices[monsterChoice]);
+				int result = (heroChoice - monsterChoice + 3) % 3;
+				if (result == 0) {
+					System.out.println("비겼습니다.");
+				} else if (result == 1) {
+					System.out.println("몬스터가 이겼습니다.");
+				} else {
+					System.out.println("영웅이 이겼습니다!");
+				}
+				System.out.print("계속 하시겠습니까? (예=1, 아니오=0): ");
+				int playAgain = scanner.nextInt();
+				if (playAgain == 0) {
+					break;
+				}
+			}
+			System.out.println("게임을 종료합니다.");
+			scanner.close();
 		}
-		System.out.println("게임을 종료합니다.");
-		scanner.close();
-	    }
 	}
 
 	static int armorStore_show(int money, int num) {
