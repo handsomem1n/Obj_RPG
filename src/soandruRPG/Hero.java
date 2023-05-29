@@ -12,7 +12,7 @@ public class Hero {
 	int experience;
 	int money;
 	int needToLevelUp;
-
+	public HashMap<String, Integer> inventory = new HashMap<>();
 	public Hero(String name) {
 		this.name = name;
 		this.level = 1; // 초기 레벨
