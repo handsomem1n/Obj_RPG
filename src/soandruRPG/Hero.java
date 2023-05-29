@@ -84,16 +84,24 @@ public class Hero {
 		this.money = money;
 	}
 
+
+	public int attack(int num) {
+		return 0;
+	}
+
 	public int getNeedToLevelUp() {
 		return this.needToLevelUp;
+
 	}
 
 	public void setNeedToLevelUp(int needToLevelUp) {
 		this.needToLevelUp = needToLevelUp;
 	}
 
+
 	public void gainExperience(int experience) {
 		this.experience += experience;
+
 
 		// 경험치가 레벨업에 필요한 경험치 이상이면 레벨업
 		if (this.experience >= this.needToLevelUp) {
@@ -132,6 +140,7 @@ public class Hero {
 		System.out.println("MP: " + this.total_mp);
 		System.out.println("경험치: " + this.experience);
 		System.out.println("다음 레벨업까지 필요한 경험치: " + this.needToLevelUp);
+
 	}
 
 	public int attack(int skillNum) {

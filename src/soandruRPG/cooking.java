@@ -78,6 +78,7 @@ public class cooking {
 //		return quantity;
 //	}
 
+
 // 	public static void main(String[] args) {
 // 		Mage m = new Mage("nam");
 // 		cooking cooking = new cooking(m);

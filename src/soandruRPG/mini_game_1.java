@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class mini_game_1 {
+
 	Scanner scanner = new Scanner(System.in);
 	Random random = new Random();
 
