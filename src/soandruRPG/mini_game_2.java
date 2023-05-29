@@ -50,6 +50,7 @@ public class mini_game_2 {
 				|| (userChoice.equals("보") && computerChoice.equals("바위"))) {
 			return "이겼습니다!";
 			h.setMoney(h.getMoney() + 20);
+			System.out.print("Hero의 현재 돈: " + h.getMoney());
 		} else {
 			return "졌습니다! 다음 기회를 노리세요!";
 		}
