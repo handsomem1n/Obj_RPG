@@ -1,41 +1,50 @@
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 
 class Cooking {
-    private HashMap<String, Integer> inventory;
-    private int heroHp;
+    private List<String> inventory;
 
     public Cooking() {
-        inventory = new HashMap<>();
+        inventory = new ArrayList<>();
     }
 
     public void enterKitchen() {
         System.out.println("요리실에 입장했습니다.");
     }
 
-    public void addToInventory(String ingredient, int hpIncrease) {
-        inventory.put(ingredient, hpIncrease);
+    public void addToInventory(String ingredient) {
+        inventory.add(ingredient);
     }
 
     public void cook(String ingredient) {
-        if (!inventory.containsKey(ingredient)) {
+        if (!inventory.contains(ingredient)) {
             System.out.println("재료가 인벤토리에 존재하지 않습니다.");
             return;
         }
 
-        int hpIncrease = inventory.get(ingredient);
-        heroHp += hpIncrease;
-        System.out.println(ingredient + "로 요리를 만들었습니다!");
-        System.out.println("Hero의 HP가 증가했습니다. 현재 HP: " + hero_hp);
+        if (ingredient.equals("너구리의 꼬리")) {
+            System.out.println("너구리 스튜를 만들었습니다!");
+            // 요리에 필요한 로직 추가
+        } else if (ingredient.equals("살쾡이의 살코기")) {
+            System.out.println("살쾡이 스테이크를 만들었습니다!");
+            // 요리에 필요한 로직 추가
+        } else if (ingredient.equals("리본돼지의 삼겹살")) {
+            System.out.println("삼겹살 구이를 만들었습니다!");
+            // 요리에 필요한 로직 추가
+        } else if (ingredient.equals("슬라임의 슬라임")) {
+            System.out.println("슬라임 젤리를 만들었습니다!");
+            // 요리에 필요한 로직 추가
+        } else {
+            System.out.println("잘못된 재료입니다.");
+        }
     }
 
     public static void main(String[] args) {
         Cooking cooking = new Cooking();
         cooking.enterKitchen();
 
-        cooking.addToInventory("너구리의 꼬리", 5);
-        cooking.addToInventory("살쾡이의 살코기", 10);
-        cooking.addToInventory("리본돼지의 삼겹살", 15);
-        cooking.addToInventory("슬라임의 슬라임", 20);
+        cooking.addToInventory("너구리의 꼬리");
+        cooking.addToInventory("슬라임의 슬라임");
 
         cooking.cook("너구리의 꼬리");
         cooking.cook("살쾡이의 살코기");
