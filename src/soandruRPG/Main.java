@@ -132,7 +132,7 @@ public class Main {
 					System.out.println("****************************");
 					WeaponShop weaponshop = new WeaponShop();
 					weaponshop.displayWeapons(); // 무기 상점에 있는 무기 목록을 출력
-					System.out.print("구매할 무기 이름을 입력하세요: ");
+					System.out.println("구매할 무기 이름을 입력하세요: ");
 					System.out.println("****************************");
 					String weaponName = sc.next();
 					weaponshop.buyWeapon(h, weaponName); // 사용자가 입력한 무기 이름으로 무기를 구매
