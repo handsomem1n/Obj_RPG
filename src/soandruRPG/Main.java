@@ -89,7 +89,7 @@ public class Main {
 					chosenMonster = null;
 					break;
 				}
-				HuntingGround hg = new HuntingGround(h);
+				HuntingGround hg = new HuntingGround();
 				hg.battle(h, chosenMonster);
 
 			} 
