@@ -57,7 +57,8 @@ public class HuntingGround {
 		Monster2 m2 = new Monster2();
 		HuntingGround hunt = new HuntingGround();
 		hunt.battle(h, m);
-
-		System.out.println(h.inventory);
+		
+		//재료 없을때:{}, 재료 있을때:{재료:수량}
+		//System.out.println(h.inventory);
 	}
 }
