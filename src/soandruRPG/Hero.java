@@ -84,12 +84,15 @@ public class Hero {
 		this.money = money;
 	}
 
+	int attack(int num) {
+		return 0
 	public int getNeedToLevelUp() {
 		return this.needToLevelUp;
 	}
 
 	public void setNeedToLevelUp(int needToLevelUp) {
 		this.needToLevelUp = needToLevelUp;
+
 	}
 
 	public void gainExperience(int exp) {
