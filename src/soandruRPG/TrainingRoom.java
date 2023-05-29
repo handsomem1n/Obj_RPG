@@ -20,7 +20,6 @@ class TrainingRoom extends HuntingGround {
 		while (true) {
 
 			System.out.println(h.name + "의 공격입니다.");
-			System.out.println(h.name + "의 공격입니다.");
 			// m.monster_attacked(h.defense,h.attack());
 			System.out.println("1번: 기본공격 ");
 			System.out.println("2번: 스킬1 ");
@@ -72,15 +71,15 @@ class TrainingRoom extends HuntingGround {
 		}
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Mage h = new Mage("nam");
-		Training_Monster1 m = new Training_Monster1();
-		TrainingRoom t = new TrainingRoom();
-		Scanner sc = new Scanner(System.in);
-		// 처음에 강화된 몬스터1을 잡기 위해서 인수로 1번 몬스터를 넣어줘야 하며 이후 로직은 battle의 증감문을 통해 다음몬스터랑 배틀 가능
-		t.battle(h, m, 0);
-		System.out.println(h.experience);
-	}
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//		Mage h = new Mage("nam");
+//		Training_Monster1 m = new Training_Monster1();
+//		TrainingRoom t = new TrainingRoom();
+//		Scanner sc = new Scanner(System.in);
+//		// 처음에 강화된 몬스터1을 잡기 위해서 인수로 1번 몬스터를 넣어줘야 하며 이후 로직은 battle의 증감문을 통해 다음몬스터랑 배틀 가능
+//		t.battle(h, m, 0);
+//		System.out.println(h.experience);
+//	}
 
 }
