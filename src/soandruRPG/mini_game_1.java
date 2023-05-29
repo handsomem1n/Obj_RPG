@@ -39,6 +39,7 @@ public class mini_game_1 {
 				System.out.println("축하합니다! 몬스터를 찾았습니다.");
 				System.out.println("총 시도 횟수: " + attempts);
 				h.setMoney(h.getMoney() + 20); // 만약 몬스터를 찾으면 히어로의 돈이 증가하게 된다.
+				System.out.print("Hero의 현재 돈: " + h.getMoney());
 			} else {
 				System.out.println("몬스터는 다른 위치에 있습니다.");
 
