@@ -7,6 +7,7 @@ import java.util.Scanner;
 //hero hp+=map.get(너구리 꼬리) 5 
 public class cooking {
 	public HashMap<String, Integer> eating = new HashMap<>();
+	Scanner sc = new Scanner(System.in);
 
 	public cooking(Hero h) {
 //		h.inventory.put("너구리의 꼬리", 5);
@@ -17,10 +18,6 @@ public class cooking {
 		eating.put("살쾡이의 살코기", 10);
 		eating.put("리본돼지의 삼겹살", 15);
 		eating.put("슬라임의 슬라임", 20);
-	}
-
-	public void enterKitchen() {
-		System.out.println("요리실에 입장했습니다.");
 	}
 
 //	public void addToInventory(String ingredient) {
@@ -36,12 +33,18 @@ public class cooking {
 //		h.inventory.put(ingredient, h.inventory.get(ingredient) + quantity);
 //	}
 
-	public void makeDish(Hero h, String menu) {
+	public void makeDish(Hero h) {
+		if (h.inventory.isEmpty()) {
+			System.out.println("요리 재료가 없습니다.");
+			return;
+		}
 		System.out.println(h.inventory);
 		System.out.println("너구리 꼬리 스튜, 살쾡이 스테이크, 삼겹살 구이, 슬라임 젤리");
+		System.out.println("만약 요리를 만들고 싶지 않다면 '만들지 않기'를 입력해 주세요");
 		System.out.print("원하시는 메뉴를 골라주세요: ");
-		String ingredient = null;
 
+		String ingredient = null;
+		String menu = sc.nextLine();
 		if (menu.equals("너구리 꼬리 스튜")) {
 			ingredient = "너구리의 꼬리";
 		} else if (menu.equals("살쾡이 스테이크")) {
@@ -50,6 +53,8 @@ public class cooking {
 			ingredient = "리본돼지의 삼겹살";
 		} else if (menu.equals("슬라임 젤리")) {
 			ingredient = "슬라임의 슬라임";
+		} else if (menu.equals("만들지 않기")) {
+			return;
 		} else {
 			System.out.println("잘못된 메뉴입니다.");
 			return;
@@ -78,13 +83,12 @@ public class cooking {
 //		return quantity;
 //	}
 
-
 // 	public static void main(String[] args) {
 // 		Mage m = new Mage("nam");
 // 		cooking cooking = new cooking(m);
 // 		cooking.enterKitchen();
 // 		Scanner sc = new Scanner(System.in);
 // 		String menu = sc.nextLine();
-// 		cooking.makeDish(m, menu);
+// 		cooking.makeDish(h, menu);
 // 	}
 }
