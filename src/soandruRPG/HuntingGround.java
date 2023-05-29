@@ -3,7 +3,10 @@ package soandruRPG;
 import java.util.Scanner;
 
 public class HuntingGround {
-
+	Hero hero;
+	public HuntingGround(Hero hero) {
+		this.hero = hero;
+	}
 	public void heroAttack(Monster m, int sum) {
 		if (m.monster_defense >= sum) {
 			System.out.println(m.monster_name + "의 방어력이 높아 효과가 없었습니다.");
@@ -35,23 +38,15 @@ public class HuntingGround {
 			System.out.println("3번: 스킬2 ");
 			System.out.print("사용하려는 스킬을 선택해주세요");
 			int skillNum = sc.nextInt();
-			if (skillNum == 2 && h.mp < 30 || skillNum == 3 && h.mp < 50) {
-				System.out.println("마나가 부족합니다 다른 스킬을 선택해 주세요");
-				continue;
-			} else if (skillNum == 2) {
-				h.mp -= 30;
-			} else if (skillNum == 3) {
-				h.mp -= 50;
-			}
 			heroAttack(m, h.attack(skillNum));
-			if (m.monster_hp <= 0) {
-
-				System.out.println(m.monster_name + "가 죽었습니다.");
-				h.experience += m.monster_experience;
-				h.money += m.monster_money;
-				h.inventory.put(m.item, h.inventory.get(m.item) != null ? h.inventory.get(m.item) + 1 : 0 + 1);
-				break;
-			}
+//			if (m.monster_hp <= 0) {
+//
+//				System.out.println(m.monster_name + "가 죽었습니다.");
+//				h.experience += m.monster_experience;
+//				h.money += m.monster_money;
+//				h.inventory.put(m.item, h.inventory.get(m.item) != null ? h.inventory.get(m.item) + 1 : 0 + 1);
+//				break;
+//			}
 
 			System.out.println(m.monster_name + "의 공격입니다.");
 //			hero_attacked(m.monster_attack());
@@ -66,14 +61,14 @@ public class HuntingGround {
 		}
 	}
 
-	public static void main(String[] args) {
-		Mage h = new Mage("nam");
-		Monster1 m = new Monster1();
-		Monster2 m2 = new Monster2();
-		HuntingGround hunt = new HuntingGround();
-		hunt.battle(h, m2);
-
-		// 재료 없을때:{}, 재료 있을때:{재료:수량}
-		// System.out.println(h.inventory);
-	}
+//	public static void main(String[] args) {
+//		Mage h = new Mage("nam");
+//		Monster1 m = new Monster1();
+//		Monster2 m2 = new Monster2();
+//		HuntingGround hunt = new HuntingGround();
+//		hunt.battle(h, m);
+//
+//		// 재료 없을때:{}, 재료 있을때:{재료:수량}
+//		// System.out.println(h.inventory);
+//	}
 }
