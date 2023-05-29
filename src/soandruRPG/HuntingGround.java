@@ -39,14 +39,14 @@ public class HuntingGround {
 			System.out.print("사용하려는 스킬을 선택해주세요");
 			int skillNum = sc.nextInt();
 			heroAttack(m, h.attack(skillNum));
-//			if (m.monster_hp <= 0) {
-//
-//				System.out.println(m.monster_name + "가 죽었습니다.");
-//				h.experience += m.monster_experience;
-//				h.money += m.monster_money;
-//				h.inventory.put(m.item, h.inventory.get(m.item) != null ? h.inventory.get(m.item) + 1 : 0 + 1);
-//				break;
-//			}
+			if (m.monster_hp <= 0) {
+
+				System.out.println(m.monster_name + "가 죽었습니다.");
+				h.experience += m.monster_experience;
+				h.money += m.monster_money;
+				h.inventory.put(m.item, h.inventory.get(m.item) != null ? h.inventory.get(m.item) + 1 : 0 + 1);
+				break;
+			}
 
 			System.out.println(m.monster_name + "의 공격입니다.");
 //			hero_attacked(m.monster_attack());
