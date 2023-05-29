@@ -5,6 +5,7 @@ public class Rogue extends Hero {
 		super(name);
 		this.power = 25;
 		this.hp = 60;
+		this.total_hp = 60;
 		this.defense = 15;
 		this.mp = 10;
 		this.experience = 0;
