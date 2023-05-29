@@ -84,7 +84,7 @@ public class Hero {
 	}
 
 	int attack(int num) {
-		return level * 10 + power * 20;
+		return 0;
 	}
 
 	void attacked(int sum) {
