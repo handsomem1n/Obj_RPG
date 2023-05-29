@@ -61,6 +61,8 @@ public class Main {
 			System.out.println("3. 수련의 방");
 			System.out.println("4. 미니게임");
 			System.out.println("5. 무기 상점");
+			System.out.println("6. 요리실");
+			System.out.println("7. 던젼");
 			System.out.printf("입장할 장소를 입력하세요. : ");
 			num = sc.nextInt();
 			if (num == 1) {
