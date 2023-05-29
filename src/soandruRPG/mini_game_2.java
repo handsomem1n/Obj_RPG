@@ -2,12 +2,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class mini_game_2 {
-	public static void main(String[] args) {
-		String[] choices = { "가위", "바위", "보" };
+	String[] choices = { "가위", "바위", "보" };
 
-		Scanner sc = new Scanner(System.in);
-		Random random = new Random();
+	Scanner sc = new Scanner(System.in);
+	Random random = new Random();
 
+	public void playGame2(Hero h) {
 		System.out.println("게임 설명 : 몬스터와의 가위바위보 게임에서 이기세요!");
 
 		boolean playAgain = true;
@@ -49,7 +49,7 @@ public class mini_game_2 {
 				|| (userChoice.equals("바위") && computerChoice.equals("가위"))
 				|| (userChoice.equals("보") && computerChoice.equals("바위"))) {
 			return "이겼습니다!";
-			// hero_money += 20;
+			h.setMoney(h.getMoney() + 20);
 		} else {
 			return "졌습니다! 다음 기회를 노리세요!";
 		}
