@@ -95,7 +95,7 @@ public class Hero {
 		}
 	}
 }
-Hero H = new Hero();
+(직업) H = new Hero();
 H.hp = 
 
 // 직업 클래스
