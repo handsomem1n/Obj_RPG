@@ -51,7 +51,7 @@ public class mini_game_2 {
             (userChoice.equals("보") && computerChoice.equals("바위"))
         ) {
             return "이겼습니다!";
-                // hero_money += 10;
+                // hero_money += 20;
         } else {
             return "졌습니다! 다음 기회를 노리세요!";
         }
