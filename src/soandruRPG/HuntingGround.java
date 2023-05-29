@@ -3,11 +3,6 @@ package soandruRPG;
 import java.util.Scanner;
 
 public class HuntingGround {
-	Hero hero;
-
-	public HuntingGround(Hero h) {
-		this.hero = h;
-	}
 
 	public void heroAttack(Monster m, int sum) {
 		if (m.monster_defense >= sum) {

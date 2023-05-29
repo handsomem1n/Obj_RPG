@@ -67,16 +67,16 @@ public class MeditationRoom {
 		return newHpMp;
 	}
 
-	public static void main(String[] args) {
-		int meditationHpMp[];
-		Mage h = new Mage("nam");
-		MeditationRoom s = new MeditationRoom();
-		meditationHpMp = s.meditation();
-		System.out.println("hp " + meditationHpMp[0] + " 회복");
-		h.hp += meditationHpMp[0];
-		System.out.println("mp " + meditationHpMp[1] + " 회복");
-		h.mp += meditationHpMp[1];
-
-	}
+//	public static void main(String[] args) {
+//		int meditationHpMp[];
+//		Mage h = new Mage("nam");
+//		MeditationRoom s = new MeditationRoom();
+//		meditationHpMp = s.meditation();
+//		System.out.println("hp " + meditationHpMp[0] + " 회복");
+//		h.hp += meditationHpMp[0];
+//		System.out.println("mp " + meditationHpMp[1] + " 회복");
+//		h.mp += meditationHpMp[1];
+//
+//	}
 
 }
