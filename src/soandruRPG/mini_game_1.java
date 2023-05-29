@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class mini_game_1 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Random random = new Random();
 
         System.out.println("게임 설명 : 5번의 기회 안에 몬스터 10마리 중 진짜를 찾으세요!");
