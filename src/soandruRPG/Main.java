@@ -69,6 +69,8 @@ public class Main {
 			}
 			else if(num == 2) {
 				System.out.println("포션 상점에 입장하였습니다.");
+				PortionShop portionShop = new PortionShop();
+				portionShop.marketShow(h);
 			}
 			else if(num == 3) {
 				System.out.println("수련의 방에 입장하였습니다.");
@@ -89,7 +91,9 @@ public class Main {
 				System.out.printf("번호를 입력하세요. : ");
 				num = sc.nextInt();
 				if (num == 1) {
-					mini_game_1 g1 = new mini_game_1();
+					System.out.println("미니 게임 1에 참가하셨습니다.");
+					mini_game_1 game = new mini_game_1();
+					game.playGame(h);
 				}
 				else if( num == 2) {
 					mini_game_2 g2 = new mini_game_2();
@@ -98,6 +102,10 @@ public class Main {
 			else if(num == 5) {
 				System.out.println("무기 상점에 입장하였습니다.");
 				WeaponShop weaponshop = new WeaponShop();
+				weaponshop.displayWeapons(); // 무기 상점에 있는 무기 목록을 출력
+				System.out.print("구매할 무기 이름을 입력하세요: ");
+				String weaponName = sc.next();
+				weaponshop.buyWeapon(h, weaponName); // 사용자가 입력한 무기 이름으로 무기를 구매
 			}
 			else if(num == 6) {
 				System.out.println("던전에 입장하였습니다.");
