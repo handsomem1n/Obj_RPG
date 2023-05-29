@@ -36,7 +36,7 @@ public class mini_game_1 {
                 foundMonster = true;
                 System.out.println("축하합니다! 몬스터를 찾았습니다.");
                 System.out.println("총 시도 횟수: " + attempts);
-                // hero_money += 10;
+                // hero_money += 20;
             } else {
                 System.out.println("몬스터는 다른 위치에 있습니다.");
 
