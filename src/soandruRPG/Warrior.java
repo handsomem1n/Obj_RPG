@@ -1,4 +1,4 @@
-package SOandRU;
+package soandruRPG;
 
 public class Warrior extends Hero {
 	public Warrior(String name) {
