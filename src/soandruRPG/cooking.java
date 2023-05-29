@@ -24,16 +24,20 @@ class Cooking {
 
         if (ingredient.equals("너구리의 꼬리")) {
             System.out.println("너구리 스튜를 만들었습니다!");
-            // hero_hp += 5;
+            hero_hp += 5;
+            System.out.println("영웅의 체력이 5만큼 증가했습니다!");
         } else if (ingredient.equals("살쾡이의 살코기")) {
             System.out.println("살쾡이 스테이크를 만들었습니다!");
-            // hero_hp += 10;
+            hero_hp += 10;
+            System.out.println("영웅의 체력이 10만큼 증가했습니다!");
         } else if (ingredient.equals("리본돼지의 삼겹살")) {
             System.out.println("삼겹살 구이를 만들었습니다!");
-            // hero_hp += 15;
+            hero_hp += 15;
+            System.out.println("영웅의 체력이 15만큼 증가했습니다!");
         } else if (ingredient.equals("슬라임의 슬라임")) {
             System.out.println("슬라임 젤리를 만들었습니다!");
-            // hero_hp += 20;
+            hero_hp += 20;
+            System.out.println("영웅의 체력이 20만큼 증가했습니다!");
         } else {
             System.out.println("잘못된 재료입니다.");
         }
