@@ -61,6 +61,7 @@ public class HuntingGround {
 				break;
 			}
 		}
+		sc.close();
 	}
 
 //	public static void main(String[] args) {
