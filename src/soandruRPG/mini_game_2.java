@@ -5,7 +5,7 @@ public class mini_game_2 {
     public static void main(String[] args) {
         String[] choices = {"가위", "바위", "보"};
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Random random = new Random();
 
         System.out.println("게임 설명 : 몬스터와의 가위바위보 게임에서 이기세요!");
