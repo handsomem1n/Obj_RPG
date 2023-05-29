@@ -1,13 +1,17 @@
+
+package soandruRPG;
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class mini_game_2 {
-	public static void main(String[] args) {
-		String[] choices = { "가위", "바위", "보" };
 
-		Scanner sc = new Scanner(System.in);
-		Random random = new Random();
+	String[] choices = { "가위", "바위", "보" };
 
+	Scanner sc = new Scanner(System.in);
+	Random random = new Random();
+
+	public void playGame2(Hero h) {
 		System.out.println("게임 설명 : 몬스터와의 가위바위보 게임에서 이기세요!");
 
 		boolean playAgain = true;
@@ -25,10 +29,11 @@ public class mini_game_2 {
 
 			System.out.println("Hero 선택 : " + userChoice);
 			System.out.println("Monster 선택 : " + computerChoice);
-			System.out.println("결과 : " + getWinner(userChoice, computerChoice));
+
+			System.out.println("결과 : " + getWinner(userChoice, computerChoice, h));
 
 			System.out.print("계속 하시겠습니까? (Y/N): ");
-			String playAgainChoice = scanner.nextLine();
+			String playAgainChoice = sc.nextLine();
 
 			if (playAgainChoice.equalsIgnoreCase("N")) {
 				playAgain = false;
@@ -42,14 +47,17 @@ public class mini_game_2 {
 		return choice.equals("가위") || choice.equals("바위") || choice.equals("보");
 	}
 
-	public static String getWinner(String userChoice, String computerChoice) {
+
+	public static String getWinner(String userChoice, String computerChoice, Hero h) {
 		if (userChoice.equals(computerChoice)) {
 			return "비겼습니다!";
 		} else if ((userChoice.equals("가위") && computerChoice.equals("보"))
 				|| (userChoice.equals("바위") && computerChoice.equals("가위"))
 				|| (userChoice.equals("보") && computerChoice.equals("바위"))) {
+
+			h.setMoney(h.getMoney() + 20);
+			System.out.print("Hero의 현재 돈: " + h.getMoney());
 			return "이겼습니다!";
-			// hero_money += 20;
 		} else {
 			return "졌습니다! 다음 기회를 노리세요!";
 		}

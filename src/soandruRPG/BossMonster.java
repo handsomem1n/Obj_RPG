@@ -200,6 +200,7 @@ class BossMonster4 extends BossMonster {
 			System.out.println("할퀴기");
 			return (this.monster_level * 20) + (this.monster_power * 40);
 		}
+
 	}
 
 }

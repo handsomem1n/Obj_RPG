@@ -3,7 +3,11 @@ package soandruRPG;
 import java.util.Scanner;
 
 public class HuntingGround {
-
+	Hero hero;
+	public HuntingGround(Hero h) {
+		this.hero = h;
+	}
+	
 	public void heroAttack(Monster m, int sum) {
 		if (m.monster_defense >= sum) {
 			System.out.println(m.monster_name + "의 방어력이 높아 효과가 없었습니다.");
@@ -61,19 +65,22 @@ public class HuntingGround {
 				System.out.println(h.name + "이 죽었습니다.");
 				h.hp = 1;
 				System.out.println(h.name + "이 체력" + h.hp + "으로 부활했습니다.");
+				System.out.println("***************************************");
 				break;
 			}
 		}
+		sc.close();
 	}
 
-	public static void main(String[] args) {
-		Mage h = new Mage("nam");
-		Monster1 m = new Monster1();
-		Monster2 m2 = new Monster2();
-		HuntingGround hunt = new HuntingGround();
-		hunt.battle(h, m2);
 
-		// 재료 없을때:{}, 재료 있을때:{재료:수량}
-		// System.out.println(h.inventory);
-	}
+//	public static void main(String[] args) {
+//		Mage h = new Mage("nam");
+//		Monster1 m = new Monster1();
+//		Monster2 m2 = new Monster2();
+//		HuntingGround hunt = new HuntingGround();
+//		hunt.battle(h, m);
+//
+//		// 재료 없을때:{}, 재료 있을때:{재료:수량}
+//		// System.out.println(h.inventory);
+//	}
 }
