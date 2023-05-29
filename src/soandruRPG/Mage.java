@@ -1,4 +1,4 @@
-package SOandRU;
+package soandruRPG;
 
 public class Mage extends Hero {
 	public Mage(String name) {
