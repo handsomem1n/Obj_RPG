@@ -16,8 +16,6 @@ class BossMonster extends Monster {
 
 		System.out.println(m.monster_name + "과의 전투를 시작합니다.");
 		while (true) {
-
-			System.out.println(h.name + "의 공격입니다.");
 			System.out.println(h.name + "의 공격입니다.");
 			// m.monster_attacked(h.defense,h.attack());
 			System.out.println("1번: 기본공격 ");
