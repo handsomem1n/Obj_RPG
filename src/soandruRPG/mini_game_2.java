@@ -28,7 +28,7 @@ public class mini_game_2 {
 			System.out.println("결과 : " + getWinner(userChoice, computerChoice));
 
 			System.out.print("계속 하시겠습니까? (Y/N): ");
-			String playAgainChoice = scanner.nextLine();
+			String playAgainChoice = sc.nextLine();
 
 			if (playAgainChoice.equalsIgnoreCase("N")) {
 				playAgain = false;
