@@ -13,7 +13,7 @@ class Cooking {
     }
 
     public void addToInventory(Hero h, String ingredient, int cook) {
-        if(!h.iventory.get(ingredient) && h.iventory.get(ingredient)!=0){
+        if(!h.inventory.get(ingredient) && h.inventory.get(ingredient)!=0){
             return
             if(num == 1){
             
