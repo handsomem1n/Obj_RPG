@@ -5,6 +5,7 @@ public class Mage extends Hero {
 		super(name);
 		this.power = 20;
 		this.hp = 50;
+		this.total_hp = 50;
 		this.defense = 10;
 		this.mp = 30;
 		this.experience = 0;
