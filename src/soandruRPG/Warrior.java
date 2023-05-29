@@ -1,7 +1,5 @@
 package SOandRU;
 
-import java.util.Scanner;
-
 public class Warrior extends Hero {
 	public Warrior(String name) {
 		super(name);
