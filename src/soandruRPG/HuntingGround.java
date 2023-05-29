@@ -3,11 +3,6 @@ package soandruRPG;
 import java.util.Scanner;
 
 public class HuntingGround {
-	Hero hero;
-
-	public HuntingGround(Hero h) {
-		this.hero = h;
-	}
 
 	public void heroAttack(Monster m, int sum) {
 		if (m.monster_defense >= sum) {
@@ -40,14 +35,6 @@ public class HuntingGround {
 			System.out.println("3번: 스킬2 ");
 			System.out.print("사용하려는 스킬을 선택해주세요");
 			int skillNum = sc.nextInt();
-			if (skillNum == 2 && h.mp < 30 || skillNum == 3 && h.mp < 50) {
-				System.out.println("마나가 부족합니다 다른 스킬을 선택해 주세요");
-				continue;
-			} else if (skillNum == 2) {
-				h.mp -= 30;
-			} else if (skillNum == 3) {
-				h.mp -= 50;
-			}
 			heroAttack(m, h.attack(skillNum));
 			if (m.monster_hp <= 0) {
 
