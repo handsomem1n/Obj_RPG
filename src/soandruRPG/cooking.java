@@ -12,8 +12,14 @@ class Cooking {
         System.out.println("요리실에 입장했습니다.");
     }
 
-    public void addToInventory(String ingredient) {
-        inventory.add(ingredient);
+    public void addToInventory(Hero h, String ingredient, int cook) {
+        if(!h.iventory.get(ingredient) && h.iventory.get(ingredient)!=0){
+            return
+            if(num == 1){
+            
+            }
+            else if{num == 2}
+        }
     }
 
     public void cook(String ingredient) {
