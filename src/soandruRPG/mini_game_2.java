@@ -29,7 +29,8 @@ public class mini_game_2 {
 			System.out.println("Hero 선택 : " + userChoice);
 			System.out.println("Monster 선택 : " + computerChoice);
 
-			System.out.println("결과 : " + getWinner(userChoice, computerChoice, h));
+			System.out.print("결과 : ");
+			getWinner(userChoice, computerChoice, h);
 
 			System.out.print("계속 하시겠습니까? (Y/N): ");
 			String playAgainChoice = sc.nextLine();
@@ -37,6 +38,7 @@ public class mini_game_2 {
 			if (playAgainChoice.equalsIgnoreCase("N")) {
 				playAgain = false;
 			}
+			System.out.println("*****************************");
 		}
 
 		System.out.println("게임을 종료합니다.");
@@ -46,19 +48,19 @@ public class mini_game_2 {
 		return choice.equals("가위") || choice.equals("바위") || choice.equals("보");
 	}
 
-
-	public static String getWinner(String userChoice, String computerChoice, Hero h) {
+	public static void getWinner(String userChoice, String computerChoice, Hero h) {
 		if (userChoice.equals(computerChoice)) {
-			return "비겼습니다!";
+			System.out.println("비겼습니다!");
 		} else if ((userChoice.equals("가위") && computerChoice.equals("보"))
 				|| (userChoice.equals("바위") && computerChoice.equals("가위"))
 				|| (userChoice.equals("보") && computerChoice.equals("바위"))) {
-
 			h.setMoney(h.getMoney() + 20);
-			System.out.print("Hero의 현재 돈: " + h.getMoney());
-			return "이겼습니다!";
+			System.out.println("이겼습니다!");
+			System.out.printf("%s의 현재 돈: " + h.getMoney(), h.name);
+			System.out.println();
+
 		} else {
-			return "졌습니다! 다음 기회를 노리세요!";
+			System.out.println("졌습니다! 다음 기회를 노리세요!");
 		}
 	}
 }
