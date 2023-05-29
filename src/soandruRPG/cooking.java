@@ -43,8 +43,11 @@ class Cooking {
         Cooking cooking = new Cooking();
         cooking.enterKitchen();
 
-        cooking.addToInventory("너구리의 꼬리");
-        cooking.addToInventory("슬라임의 슬라임");
+//         cooking.addToInventory("너구리의 꼬리");
+//         cooking.addToInventory("살쾡이의 살코기");
+//         cooking.addToInventory("리본돼지의 삼겹살");
+//         cooking.addToInventory("슬라임의 슬라임");
+//         이 부분은 싸움터 클래스에서 각각 몬스터를 해치웠을 때 로직 추가하면 됨.
 
         cooking.cook("너구리의 꼬리");
         cooking.cook("살쾡이의 살코기");
