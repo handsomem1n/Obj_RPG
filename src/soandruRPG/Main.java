@@ -62,7 +62,50 @@ public class Main {
 			System.out.println("5. 무기 상점");
 			System.out.printf("입장할 장소를 입력하세요. : ");
 			num = sc.nextInt();
+			if (num == 1) {
+				System.out.println("사냥터에 입장하였습니다.");
+				HuntingGround hg = new HuntingGround(h);
+				
+			}
+			else if(num == 2) {
+				System.out.println("포션 상점에 입장하였습니다.");
+			}
+			else if(num == 3) {
+				System.out.println("수련의 방에 입장하였습니다.");
+				System.out.println("1. 몬스터 전투 훈련");
+				System.out.println("2. 명상실");
+				System.out.println("번호를 입력하세요. :");
+				num = sc.nextInt();
+				if(num == 1) {
+					System.out.println("몬스터 전투 훈련을 시작합니다.");
+					System.out.println("1. 너구리 ");
+					System.out.println("2. 살쾡이");
+					System.out.println("번호를 선택하세요");
+			}
+			else if(num == 4) {
+				System.out.println("미니게임에 입장하였습니다.");
+				System.out.println("1. 진짜 몬스터를 찾아라!");
+				System.out.println("2. 몬스터와의 가위바위보에서 이겨라!");
+				System.out.printf("번호를 입력하세요. : ");
+				num = sc.nextInt();
+				if (num == 1) {
+					mini_game_1 g1 = new mini_game_1();
+				}
+				else if( num == 2) {
+					mini_game_2 g2 = new mini_game_2();
+				}
+			}
+			else if(num == 5) {
+				System.out.println("무기 상점에 입장하였습니다.");
+				WeaponShop weaponshop = new WeaponShop();
+			}
+			else if(num == 6) {
+				System.out.println("던전에 입장하였습니다.");
+			}
+			
+			
 		}
 	}
 
+}
 }
