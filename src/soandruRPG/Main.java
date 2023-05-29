@@ -149,8 +149,10 @@ public class Main {
 					weaponshop.buyWeapon(h, weaponName); // 사용자가 입력한 무기 이름으로 무기를 구매
 			} 
 			else if (num == 6) {
-				System.out.println("****************************");	
+				System.out.println("****************************");
 				System.out.println("요리실에 입장하였습니다.");
+				cooking cooking = new cooking(h);
+				cooking.makeDish(h);
 			}
 			else if (num == 7) {
 				System.out.println("****************************");	
