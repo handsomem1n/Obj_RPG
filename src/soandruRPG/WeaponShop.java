@@ -24,17 +24,18 @@ public class WeaponShop {
 				break;
 			}
 		}
-
 		if (weaponToBuy != null) {
 			if (hero.getMoney() >= weaponToBuy.getPrice()) {
 				hero.setMoney(hero.getMoney() - weaponToBuy.getPrice());
 				System.out.println(weaponName + " 구매 성공! 잔여 액수: " + hero.getMoney());
-				System.out.println("무기가 장착되었습니다.");
+				System.out.println("무기가 장착되었습니다.\n");
+				System.out.println("****************************");
 			} else {
-				System.out.println("구매 실패! " + weaponName);
+				System.out.println("구매 실패! 잔액이 부족합니다 : " + weaponName);
+				System.out.println("****************************");
 			}
 		} else {
-			System.out.println("찾을 수 없음..");
+			System.out.println("무기를 찾을 수 없음..");
 		}
 	}
 

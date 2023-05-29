@@ -1,4 +1,3 @@
-
 package soandruRPG;
 
 import java.util.Random;
