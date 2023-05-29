@@ -1,5 +1,7 @@
 package soandruRPG;
 
+import java.util.HashMap;
+
 public class Hero {
 	String name;
 	int level;
@@ -9,6 +11,7 @@ public class Hero {
 	int mp;
 	int experience;
 	int money;
+	public HashMap<String, Integer> inventory = new HashMap<>();
 
 	public Hero(String name) {
 		this.name = name;

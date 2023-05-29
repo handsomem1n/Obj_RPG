@@ -34,6 +34,7 @@ public class HuntingGround {
 				System.out.println(m.monster_name + "가 죽었습니다.");
 				h.experience += m.monster_experience;
 				h.money += m.monster_money;
+				h.inventory.put(m.item, h.inventory.get(m.item) != null ? h.inventory.get(m.item) + 1 : 0 + 1);
 				break;
 			}
 
@@ -52,9 +53,11 @@ public class HuntingGround {
 
 	public static void main(String[] args) {
 		Mage h = new Mage("nam");
-		Monster2 m = new Monster2();
+		Monster1 m = new Monster1();
+		Monster2 m2 = new Monster2();
 		HuntingGround hunt = new HuntingGround();
 		hunt.battle(h, m);
 
+		System.out.println(h.inventory);
 	}
 }
