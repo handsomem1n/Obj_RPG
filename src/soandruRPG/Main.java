@@ -137,8 +137,7 @@ public class Main {
 			else if (num == 6) {
 					System.out.println("던전에 입장하였습니다.");
 			}
-
 			}
-		}
 
+		}
 	}

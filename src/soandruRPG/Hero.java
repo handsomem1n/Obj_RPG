@@ -1,5 +1,7 @@
 package soandruRPG;
 
+import java.util.HashMap;
+
 public class Hero {
 	String name;
 	int level;
@@ -13,6 +15,7 @@ public class Hero {
 	int money;
 	int needToLevelUp;
 	public HashMap<String, Integer> inventory = new HashMap<>();
+
 	public Hero(String name) {
 		this.name = name;
 		this.level = 1; // 초기 레벨
@@ -84,11 +87,6 @@ public class Hero {
 		this.money = money;
 	}
 
-
-	public int attack(int num) {
-		return 0;
-	}
-
 	public int getNeedToLevelUp() {
 		return this.needToLevelUp;
 
@@ -98,10 +96,8 @@ public class Hero {
 		this.needToLevelUp = needToLevelUp;
 	}
 
-
 	public void gainExperience(int experience) {
 		this.experience += experience;
-
 
 		// 경험치가 레벨업에 필요한 경험치 이상이면 레벨업
 		if (this.experience >= this.needToLevelUp) {
