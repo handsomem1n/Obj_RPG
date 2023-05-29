@@ -107,32 +107,31 @@ public class Main {
 					System.out.println("1. 너구리 ");
 					System.out.println("2. 살쾡이");
 					System.out.println("번호를 선택하세요");
-				} else if (num == 4) {
-					System.out.println("미니게임에 입장하였습니다.");
-					System.out.println("1. 진짜 몬스터를 찾아라!");
-					System.out.println("2. 몬스터와의 가위바위보에서 이겨라!");
-					System.out.printf("번호를 입력하세요. : ");
-					num = sc.nextInt();
-					if (num == 1) {
-						System.out.println("미니 게임 1에 참가하셨습니다.");
-						mini_game_1 game = new mini_game_1();
-						game.playGame(h);
-					} else if (num == 2) {
-						mini_game_2 g2 = new mini_game_2();
-					}
-				} else if (num == 5) {
-					System.out.println("무기 상점에 입장하였습니다.");
-					WeaponShop weaponshop = new WeaponShop();
-					weaponshop.displayWeapons(); // 무기 상점에 있는 무기 목록을 출력
-					System.out.print("구매할 무기 이름을 입력하세요: ");
-					String weaponName = sc.next();
-					weaponshop.buyWeapon(h, weaponName); // 사용자가 입력한 무기 이름으로 무기를 구매
-				} else if (num == 6) {
-					System.out.println("던전에 입장하였습니다.");
 				}
-
+			} else if (num == 4) {
+				System.out.println("미니게임에 입장하였습니다.");
+				System.out.println("1. 진짜 몬스터를 찾아라!");
+				System.out.println("2. 몬스터와의 가위바위보에서 이겨라!");
+				System.out.printf("번호를 입력하세요. : ");
+				num = sc.nextInt();
+				if (num == 1) {
+					System.out.println("미니 게임 1에 참가하셨습니다.");
+					mini_game_1 game = new mini_game_1();
+					game.playGame(h);
+				} else if (num == 2) {
+					mini_game_2 g2 = new mini_game_2();
+				}
+			} else if (num == 5) {
+				System.out.println("무기 상점에 입장하였습니다.");
+				WeaponShop weaponshop = new WeaponShop();
+				weaponshop.displayWeapons(); // 무기 상점에 있는 무기 목록을 출력
+				System.out.print("구매할 무기 이름을 입력하세요: ");
+				String weaponName = sc.next();
+				weaponshop.buyWeapon(h, weaponName); // 사용자가 입력한 무기 이름으로 무기를 구매
+			} else if (num == 6) {
+				System.out.println("던전에 입장하였습니다.");
 			}
-		}
 
+		}
 	}
 }
