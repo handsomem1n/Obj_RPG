@@ -9,14 +9,14 @@ public class Monster {
 
 	}
 
-	public void monster_attacked(int hero_defense, int sum) {
-
-		if (hero_defense >= sum) {
-			monster_hp = monster_hp - 0;
-		} else {
-			monster_hp = monster_hp + monster_defense - sum;
-		}
-	}
+//	public void monster_attacked(int hero_defense, int sum) {
+//
+//		if (hero_defense >= sum) {
+//			monster_hp = monster_hp - 0;
+//		} else {
+//			monster_hp = monster_hp + monster_defense - sum;
+//		}
+//	}
 }
 
 class Monster1 extends Monster {
@@ -120,18 +120,5 @@ class Training_Monster4 extends Monster {
 		monster_mp = 0;
 		monster_level = 18;
 		monster_experience = 300;
-	}
-}
-
-class BossMonster extends Monster {
-	public BossMonster() {
-		monster_name = "사자왕";
-		monster_hp = 15000;
-		monster_defense = 200;
-		monster_power = 1000;
-		monster_mp = 0;
-		monster_level = 25;
-		monster_experience = 500;
-		monster_money = 1000;
 	}
 }

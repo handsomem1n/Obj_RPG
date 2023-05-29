@@ -24,7 +24,7 @@ public class mini_game_1 {
 
         while (attempts < 5 && !foundMonster) {
             System.out.print("몬스터 번호를 입력하세요: ");
-            int guess = scanner.nextInt();
+            int guess = sc.nextInt();
             attempts++;
 
             if (guess < 1 || guess > 10) {
@@ -52,6 +52,7 @@ public class mini_game_1 {
             System.out.println("아쉽습니다. 몬스터를 찾지 못했습니다.");
             System.out.println("정답은 " + monsterLocation + "입니다.");
         }
-	  scanner.close();
+	  sc.close();
     }
+    public static main
 }
