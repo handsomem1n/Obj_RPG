@@ -55,7 +55,7 @@ public class Main {
 		System.out.println("현재 " + h.name + "의 돈 : " + h.money + "원");
 		System.out.println("*********************");
 		while (true) {
-			System.out.println("****************************");	
+			System.out.println("*********************");	
 			System.out.println("1. 사냥터");
 			System.out.println("2. 포션 상점");
 			System.out.println("3. 수련의 방");
