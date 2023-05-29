@@ -25,7 +25,7 @@ class Cooking {
         int hpIncrease = inventory.get(ingredient);
         heroHp += hpIncrease;
         System.out.println(ingredient + "로 요리를 만들었습니다!");
-        System.out.println("Hero의 HP가 증가했습니다. 현재 HP: " + heroHp);
+        System.out.println("Hero의 HP가 증가했습니다. 현재 HP: " + hero_hp);
     }
 
     public static void main(String[] args) {
