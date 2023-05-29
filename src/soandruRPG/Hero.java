@@ -16,7 +16,7 @@ public class Hero {
 	public Hero(String name) {
 		this.name = name;
 		this.level = 1; // 초기 레벨
-		this.money = 0; // 초기 보유금액
+		this.money = 100; // 초기 보유금액
 	}
 
 	public String getName() {

@@ -1,5 +1,7 @@
 package soandruRPG;
 
+import java.util.Scanner;
+
 public class HuntingGround {
 
 	public void heroAttack(Monster m, int sum) {
@@ -24,11 +26,16 @@ public class HuntingGround {
 	}
 
 	public void battle(Hero h, Monster m) {
+		Scanner sc = new Scanner(System.in);
 		while (true) {
-
 			System.out.println(h.name + "의 공격입니다.");
 			// m.monster_attacked(h.defense,h.attack());
-			heroAttack(m, h.attack());
+			System.out.println("1번: 기본공격 ");
+			System.out.println("2번: 스킬1 ");
+			System.out.println("3번: 스킬2 ");
+			System.out.print("사용하려는 스킬을 선택해주세요");
+			int skillNum = sc.nextInt();
+			heroAttack(m, h.attack(skillNum));
 			if (m.monster_hp <= 0) {
 
 				System.out.println(m.monster_name + "가 죽었습니다.");
@@ -57,8 +64,8 @@ public class HuntingGround {
 		Monster2 m2 = new Monster2();
 		HuntingGround hunt = new HuntingGround();
 		hunt.battle(h, m);
-		
-		//재료 없을때:{}, 재료 있을때:{재료:수량}
-		//System.out.println(h.inventory);
+
+		// 재료 없을때:{}, 재료 있을때:{재료:수량}
+		// System.out.println(h.inventory);
 	}
 }

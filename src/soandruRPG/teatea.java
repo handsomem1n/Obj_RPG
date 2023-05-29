@@ -280,7 +280,7 @@ public class teatea {
 		System.out.printf("원하시는 물건을 입력하세요. : ");
 		num = sc.nextInt();
 		int temp = hero_money;
-		if ((temp = potionStore_show(temp, num)) != -1) {
+		if ((potionStore_show(temp, num)) != -1) {
 			System.out.println("구입이 완료되었습니다.");
 			if (num == 1)
 				hero_power += 3;
