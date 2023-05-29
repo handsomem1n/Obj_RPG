@@ -84,26 +84,23 @@ public class Hero {
 		this.money = money;
 	}
 
-	int attack(int num) {
-		return 0
 	public int getNeedToLevelUp() {
 		return this.needToLevelUp;
 	}
 
 	public void setNeedToLevelUp(int needToLevelUp) {
 		this.needToLevelUp = needToLevelUp;
-
 	}
 
-	public void gainExperience(int exp) {
-		this.experience += exp;
+	public void gainExperience(int experience) {
+		this.experience += experience;
 
 		// 경험치가 레벨업에 필요한 경험치 이상이면 레벨업
 		if (this.experience >= this.needToLevelUp) {
 			levelUp();
 		}
 	}
-	
+
 	// level up 메서드
 	private void levelUp() {
 		this.level++;
@@ -113,32 +110,34 @@ public class Hero {
 		this.total_mp += 10;
 		System.out.println("레벨업!!");
 		System.out.println("축하합니다! 레벨이 " + this.level + "로 올랐습니다.");
-        System.out.println("레벨업을 하여 영웅의 능력치가 상승하였습니다!!");
-        
-		
+		System.out.println("레벨업을 하여 영웅의 능력치가 상승하였습니다!!");
+
 		// 레벨업에 필요한 경험치 증가 로직
 		// 예를 들어, 다음 레벨업에 필요한 경험치를 현재 레벨의 2배로 설정
 		this.needToLevelUp = this.level * 2;
 
 		// 레벨업 후, 레벨업에 필요했던 경험치를 경험치에서 빼기
 		this.experience -= this.needToLevelUp;
-		
-		showStatus(); //스텟보여주는 메서드 호출
+
+		showStatus(); // 스텟보여주는 메서드 호출
 	}
-	    public void showStatus() {
-	        System.out.println("------ 영웅의 상태 ------");
-	        System.out.println("이름: " + this.name);
-	        System.out.println("레벨: " + this.level);
-	        System.out.println("HP: " + this.total_hp);
-	        System.out.println("Power: " + this.power);
-	        System.out.println("Defense: " + this.defense);
-	        System.out.println("MP: " + this.total_mp);
-	        System.out.println("경험치: " + this.experience);
-	        System.out.println("다음 레벨업까지 필요한 경험치: " + this.needToLevelUp);
-	    }
-	public int attack (int skillNum) {
+
+	public void showStatus() {
+		System.out.println("------ 영웅의 상태 ------");
+		System.out.println("이름: " + this.name);
+		System.out.println("레벨: " + this.level);
+		System.out.println("HP: " + this.total_hp);
+		System.out.println("Power: " + this.power);
+		System.out.println("Defense: " + this.defense);
+		System.out.println("MP: " + this.total_mp);
+		System.out.println("경험치: " + this.experience);
+		System.out.println("다음 레벨업까지 필요한 경험치: " + this.needToLevelUp);
+	}
+
+	public int attack(int skillNum) {
 		return 0;
 	}
+
 	void attacked(int sum) {
 		if (defense >= sum) {
 			// 체력변화 x
