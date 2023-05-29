@@ -57,6 +57,7 @@ public class HuntingGround {
 				System.out.println(h.name + "이 죽었습니다.");
 				h.hp = 1;
 				System.out.println(h.name + "이 체력" + h.hp + "으로 부활했습니다.");
+				System.out.println("***************************************");
 				break;
 			}
 		}
