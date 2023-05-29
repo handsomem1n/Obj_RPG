@@ -20,7 +20,22 @@ class TrainingRoom extends HuntingGround {
 		while (true) {
 
 			System.out.println(h.name + "의 공격입니다.");
-			heroAttack(m, h.attack());
+			System.out.println(h.name + "의 공격입니다.");
+			// m.monster_attacked(h.defense,h.attack());
+			System.out.println("1번: 기본공격 ");
+			System.out.println("2번: 스킬1 ");
+			System.out.println("3번: 스킬2 ");
+			System.out.print("사용하려는 스킬을 선택해주세요");
+			int skillNum = sc.nextInt();
+			if (skillNum == 2 && h.mp < 30 || skillNum == 3 && h.mp < 50) {
+				System.out.println("마나가 부족합니다 다른 스킬을 선택해 주세요");
+				continue;
+			} else if (skillNum == 2) {
+				h.mp -= 30;
+			} else if (skillNum == 3) {
+				h.mp -= 50;
+			}
+			heroAttack(m, h.attack(skillNum));
 			// 몬스터 hp가 0이 되었을 경우
 			if (m.monster_hp <= 0) {
 				// 몬스터를 잡고 얻은 경험치를 변수에 저장

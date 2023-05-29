@@ -83,7 +83,7 @@ public class Hero {
 		this.money = money;
 	}
 
-	int attack() {
+	int attack(int num) {
 		return level * 10 + power * 20;
 	}
 
