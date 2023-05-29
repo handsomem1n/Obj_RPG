@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class HuntingGround {
 	Hero hero;
-	public HuntingGround(Hero hero) {
-		this.hero = hero;
+	public HuntingGround(Hero h) {
+		this.hero = h;
 	}
+	
 	public void heroAttack(Monster m, int sum) {
 		if (m.monster_defense >= sum) {
 			System.out.println(m.monster_name + "의 방어력이 높아 효과가 없었습니다.");
