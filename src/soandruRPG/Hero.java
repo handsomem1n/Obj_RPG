@@ -1,9 +1,6 @@
-package soandruRPG;
-
-import java.util.HashMap;
+package SOandRU;
 
 public class Hero {
-
 	String name;
 	int level;
 	int power;
@@ -12,7 +9,6 @@ public class Hero {
 	int mp;
 	int experience;
 	int money;
-	HashMap<String, Integer> inventory = new HashMap<>();
 
 	public Hero(String name) {
 		this.name = name;
@@ -99,38 +95,40 @@ public class Hero {
 		}
 	}
 }
+Hero H = new Hero();
+H.hp = 
 
 // 직업 클래스
 
-// public class Warrior extends Hero {
-//     public Warrior(String name) {
-//         super(name);
-//         this.power = 15;
-//         this.hp = 90;
-//         this.defense = 30;
-//         this.mp = 10;
-//         this.experience = 0;
-//     }
-// }
+//public class Warrior extends Hero {
+//    public Warrior(String name) {
+//        super(name);
+//        this.power = 15;
+//        this.hp = 90;
+//        this.defense = 30;
+//        this.mp = 10;
+//        this.experience = 0;
+//    }
+//}
 
-// public class Mage extends Hero {
-//     public Mage(String name) {
-//         super(name);
-//         this.power = 20;
-//         this.hp = 50;
-//         this.defense = 10;
-//         this.mp = 30;
-//         this.experience = 0;
-//     }
-// }
+//public class Mage extends Hero {
+//    public Mage(String name) {
+//        super(name);
+//        this.power = 20;
+//        this.hp = 50;
+//        this.defense = 10;
+//        this.mp = 30;
+//        this.experience = 0;
+//    }
+//}
 
-// public class Rogue extends Hero {
-//     public Rogue(String name) {
-//         super(name);
-//         this.power = 25;
-//         this.hp = 60;
-//         this.defense = 15;
-//         this.mp = 10;
-//         this.experience = 0;
-//     }
-// }
+//public class Rogue extends Hero {
+//    public Rogue(String name) {
+//        super(name);
+//        this.power = 25;
+//        this.hp = 60;
+//        this.defense = 15;
+//        this.mp = 10;
+//        this.experience = 0;
+//    }
+//}
