@@ -32,7 +32,7 @@ public class Main {
 			name = sc.next();
 			h = new Mage(name);
 			break;
-
+		
 		case 3:
 			// 도적 생성
 			System.out.println("도적이 선택되었습니다.");
@@ -55,6 +55,7 @@ public class Main {
 		System.out.println("현재 " + h.name + "의 돈 : " + h.money + "원");
 		System.out.println("*********************");
 		while (true) {
+			System.out.println("****************************");	
 			System.out.println("1. 사냥터");
 			System.out.println("2. 포션 상점");
 			System.out.println("3. 수련의 방");
@@ -63,6 +64,7 @@ public class Main {
 			System.out.printf("입장할 장소를 입력하세요. : ");
 			num = sc.nextInt();
 			if (num == 1) {
+				System.out.println("****************************");	
 				System.out.println("사냥터에 입장하였습니다.");
 				System.out.println("몬스터를 선택하세요: ");
 				System.out.println("1. 너구리");
@@ -92,33 +94,30 @@ public class Main {
 				HuntingGround hg = new HuntingGround();
 				hg.battle(h, chosenMonster);
 
-			} else if (num == 2) {
+			} 
+			else if (num == 2) {
+				System.out.println("****************************");	
 				System.out.println("포션 상점에 입장하였습니다.");
 				PortionShop portionShop = new PortionShop();
 				portionShop.marketShow(h);
-			} else if (num == 3) {
+			}
+			else if (num == 3) {
+				System.out.println("****************************");	
 				System.out.println("수련의 방에 입장하였습니다.");
 				System.out.println("1. 몬스터 전투 훈련");
 				System.out.println("2. 명상실");
 				System.out.println("번호를 입력하세요. :");
 				num = sc.nextInt();
 				if (num == 1) {
+					System.out.println("****************************");	
 					System.out.println("몬스터 전투 훈련을 시작합니다.");
-					TrainingRoom tr = new TrainingRoom();
-					Training_Monster1 trainingMonster1 = new Training_Monster1();
-					tr.battle(h, trainingMonster1, 0);
-				} else if (num == 2) {
-					int meditationHpMp[];
-					MeditationRoom s = new MeditationRoom();
-					meditationHpMp = s.meditation();
-					h.mp += meditationHpMp[0];
-					h.mp += meditationHpMp[1];
-					System.out.println("hp " + meditationHpMp[0] + " 회복");
-					System.out.println("mp " + meditationHpMp[1] + " 회복");
-
-				}
-			} 
+					System.out.println("1. 너구리 ");
+					System.out.println("2. 살쾡이");
+					System.out.println("번호를 선택하세요");
+				} 
+			}
 			else if (num == 4) {
+					System.out.println("****************************");	
 					System.out.println("미니게임에 입장하였습니다.");
 					System.out.println("1. 진짜 몬스터를 찾아라!");
 					System.out.println("2. 몬스터와의 가위바위보에서 이겨라!");
@@ -131,6 +130,9 @@ public class Main {
 					} 
 					else if (num == 2) {
 						mini_game_2 g2 = new mini_game_2();
+						System.out.println("미니 게임 2에 참가하셨습니다.");
+						mini_game_2 game = new mini_game_2();
+						game.playGame2(h);
 					}
 			} 
 			else if (num == 5) {
@@ -146,9 +148,12 @@ public class Main {
 			} 
 			else if (num == 6) {
 				System.out.println("****************************");	
+				System.out.println("요리실에 입장하였습니다.");
+			}
+			else if (num == 7) {
+				System.out.println("****************************");	
 				System.out.println("던전에 입장하였습니다.");
 			}
 		}
-
 	}
 }
