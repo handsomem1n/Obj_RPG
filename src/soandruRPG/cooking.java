@@ -14,10 +14,10 @@ public class cooking {
 //		h.inventory.put("살쾡이의 살코기", 10);
 //		h.inventory.put("리본돼지의 삼겹살", 15);
 //		h.inventory.put("슬라임의 슬라임", 20);
-		eating.put("너구리의 꼬리", 5);
-		eating.put("살쾡이의 살코기", 10);
-		eating.put("리본돼지의 삼겹살", 15);
-		eating.put("슬라임의 슬라임", 20);
+		eating.put("들쥐의 꼬리", 5);
+		eating.put("불독의 뼈", 10);
+		eating.put("늑대의 고기", 15);
+		eating.put("곰의 앞발", 20);
 	}
 
 //	public void addToInventory(String ingredient) {
@@ -39,20 +39,20 @@ public class cooking {
 			return;
 		}
 		System.out.println(h.inventory);
-		System.out.println("너구리 꼬리 스튜, 살쾡이 스테이크, 삼겹살 구이, 슬라임 젤리");
+		System.out.println("들쥐의 꼬리 스튜, 불독 뼈 탕, 늑대고기 스테이크, 곰 발바닥 찜");
 		System.out.println("만약 요리를 만들고 싶지 않다면 '만들지 않기'를 입력해 주세요");
 		System.out.print("원하시는 메뉴를 골라주세요: ");
 
 		String ingredient = null;
 		String menu = sc.nextLine();
-		if (menu.equals("너구리 꼬리 스튜")) {
-			ingredient = "너구리의 꼬리";
-		} else if (menu.equals("살쾡이 스테이크")) {
-			ingredient = "살쾡이의 살코기";
-		} else if (menu.equals("삼겹살 구이")) {
-			ingredient = "리본돼지의 삼겹살";
-		} else if (menu.equals("슬라임 젤리")) {
-			ingredient = "슬라임의 슬라임";
+		if (menu.equals("들쥐의 꼬리 스튜)) {
+			ingredient = "들쥐의 ";
+		} else if (menu.equals("불독 뼈 탕")) {
+			ingredient = "불독의 뼈";
+		} else if (menu.equals("늑대고기 스테이크")) {
+			ingredient = "늑대의 고기";
+		} else if (menu.equals("곰 발바닥 찜")) {
+			ingredient = "곰의 앞발";
 		} else if (menu.equals("만들지 않기")) {
 			return;
 		} else {
