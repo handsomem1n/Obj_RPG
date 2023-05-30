@@ -44,7 +44,7 @@ class BossMonster extends Monster {
 				System.out.println(m.monster_name + "을 처치하여 " + m.monster_money + "의 돈을 획득하였습니다.");
 				if (i == 3) {
 					System.out.println("모든 보스를 격파하였습니다. 축하합니다.");
-					System.out.println("*********************");
+					System.out.println("*********ENDING***********");
 					System.out.printf("마을 촌장 : %s(이/가) 마을을 구했다 !!!", h.name);
 					System.out.print("\n");
 					System.out.printf("마을 어르신1 : 정말 대단해 %s !!!!", h.name);
@@ -53,6 +53,7 @@ class BossMonster extends Monster {
 					System.out.print("\n");
 					System.out.printf("마을 사람들 : 고마워 %s !!", h.name);
 					System.out.print("\n");
+					System.out.println("********************");
 					break;
 				}
 				System.out.println("*********************");
