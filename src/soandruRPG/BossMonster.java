@@ -23,7 +23,7 @@ class BossMonster extends Monster {
 			System.out.println("1번: 기본공격 ");
 			System.out.println("2번: 스킬1 ");
 			System.out.println("3번: 스킬2 ");
-			System.out.print("사용하려는 스킬을 선택해주세요");
+			System.out.print("사용하려는 스킬을 선택해주세요 : ");
 			int skillNum = sc.nextInt();
 			if (skillNum == 2 && h.mp < 30 || skillNum == 3 && h.mp < 50) {
 				System.out.println("마나가 부족합니다 다른 스킬을 선택해 주세요");
