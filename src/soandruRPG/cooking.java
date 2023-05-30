@@ -68,7 +68,7 @@ public class cooking {
 		System.out.println(ingredient + ": " + h.inventory.get(ingredient) + "개 있습니다.");
 		h.inventory.put(ingredient, h.inventory.get(ingredient) - 1);
 		System.out.println(h.inventory);
-		h.hp += eating.get(ingredient);
+		h.total_hp += eating.get(ingredient);
 		System.out.println(menu + "를 만들었습니다!");
 		System.out.println("영웅의 체력이 " + eating.get(ingredient) + " 증가했습니다!");
 	}
