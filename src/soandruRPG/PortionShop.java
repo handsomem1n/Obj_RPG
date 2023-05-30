@@ -48,9 +48,9 @@ public class PortionShop {
 				else if (buy == 3)
 					h.experience += experience;
 				else if (buy == 4)
-					h.hp += hp;
+					h.total_hp += hp;
 				else if (buy == 5)
-					h.mp += mp;
+					h.total_mp += mp;
 				else if (buy == 6) {
 					System.out.println("상점을 이용해 주셔서 감사합니다.");
 					return;
