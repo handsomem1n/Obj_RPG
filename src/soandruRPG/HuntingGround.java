@@ -9,7 +9,7 @@ public class HuntingGround {
 			System.out.println(m.monster_name + "의 방어력이 높아 효과가 없었습니다.");
 		} else {
 			m.monster_hp += m.monster_defense - sum;
-			System.out.println("공격을 성공 하였습니다. \n남은 " + m.monster_name + "의 hp는" + m.monster_hp + "입니다.");
+			System.out.println("\n공격을 성공 하였습니다. \n남은 " + m.monster_name + "의 hp는 " + m.monster_hp + "입니다.");
 		}
 	}
 
@@ -51,7 +51,7 @@ public class HuntingGround {
 			if (h.hp <= 0) {
 				System.out.println(h.name + "이 죽었습니다.");
 				h.hp = 1;
-				System.out.println(h.name + "이 체력" + h.hp + "으로 부활했습니다.");
+				System.out.println(h.name + "이 체력 " + h.hp + "으로 부활했습니다.");
 				System.out.println("*********************");
 				break;
 			}
