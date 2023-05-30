@@ -11,6 +11,7 @@ public class Main {
 		System.out.println("1. 전사");
 		System.out.println("2. 마법사");
 		System.out.println("3. 도적");
+		System.out.println("4. 운영자");
 		System.out.printf("직업의 번호를 입력하세요. : ");
 		int num = sc.nextInt();
 
@@ -40,6 +41,12 @@ public class Main {
 			name = sc.next();
 			h = new Rogue(name);
 			break;
+		case 4:
+			// 운영자 생성
+			System.out.println("운영자가 선택되었습니다.");
+			System.out.println("영웅의 이름을 입력하세요. : ");
+			name = sc.next();
+			h = new OperatorHero(name);
 		}
 		System.out.println("이름이 입력되었습니다.");
 		System.out.println("게임에 입장하였습니다.");
@@ -62,7 +69,7 @@ public class Main {
 			System.out.println("4. 미니게임");
 			System.out.println("5. 무기 상점");
 			System.out.println("6. 요리실");
-			System.out.println("7. 던젼");
+			System.out.println("7. 던전");
 			System.out.printf("입장할 장소를 입력하세요. : ");
 			num = sc.nextInt();
 			if (num == 1) {
@@ -160,6 +167,9 @@ public class Main {
 				BossMonster boss = new BossMonster();
 				BossMonster1 BossMonster1 = new BossMonster1();
 				boss.bossBattle(h, BossMonster1, 0);
+				if (boss.clearBoss == 4) {
+					break;
+				}
 			}
 		}
 	}
