@@ -45,6 +45,11 @@ class BossMonster extends Monster {
 				if (i == 3) {
 					System.out.println("모든 보스를 격파하였습니다. 축하합니다.");
 					System.out.println("*********************");
+					System.out.printf("마을 촌장 : %s(이/가) 마을을 구했다 !!!", h.name);
+					System.out.print("\n");
+					System.out.printf("마을 어르신1 : 정말 대단해 %s !!!!", h.name);
+					System.out.printf("마을 어르신2 : 우리에게 평화가 찾아왔다!!");
+					System.out.printf("마을 사람들 : 고마워 %s !!", h.name);
 					break;
 				}
 				System.out.println("*********************");
