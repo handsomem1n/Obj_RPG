@@ -113,12 +113,14 @@ public class Main {
 				PortionShop portionShop = new PortionShop();
 				portionShop.marketShow(h);
 			} else if (num == 3) {
+				System.out.println("*********************");
 				System.out.println("수련의 방에 입장하였습니다.");
 				System.out.println("1. 몬스터 전투 훈련");
 				System.out.println("2. 명상실");
 				System.out.println("번호를 입력하세요. :");
 				num = sc.nextInt();
 				if (num == 1) {
+					System.out.println("*********************");
 					System.out.println("몬스터 전투 훈련을 시작합니다.");
 					TrainingRoom tr = new TrainingRoom();
 					Training_Monster1 trainingMonster1 = new Training_Monster1();
@@ -141,16 +143,19 @@ public class Main {
 				System.out.printf("번호를 입력하세요. : ");
 				num = sc.nextInt();
 				if (num == 1) {
+					System.out.println("*********************");
 					System.out.println("미니 게임 1에 참가하셨습니다.");
 					mini_game_1 game = new mini_game_1();
 					game.playGame(h);
 				} else if (num == 2) {
 					mini_game_2 g2 = new mini_game_2();
+					System.out.println("*********************");
 					System.out.println("미니 게임 2에 참가하셨습니다.");
 					mini_game_2 game = new mini_game_2();
 					game.playGame2(h);
 				}
 			} else if (num == 5) {
+				System.out.println("*********************");
 				System.out.println("무기 상점에 입장하였습니다.");
 				System.out.printf("%s의 현재 돈: " + h.getMoney(), h.name);
 				System.out.println("\n****************************");
