@@ -45,7 +45,7 @@ public class cooking {
 
 		String ingredient = null;
 		String menu = sc.nextLine();
-		if (menu.equals("들쥐의 꼬리 스튜)) {
+		if (menu.equals("들쥐의 꼬리 스튜")) {
 			ingredient = "들쥐의 ";
 		} else if (menu.equals("불독 뼈 탕")) {
 			ingredient = "불독의 뼈";
