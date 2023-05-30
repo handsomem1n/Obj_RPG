@@ -13,7 +13,8 @@ class BossMonster extends Monster {
 		BossMonster bossMonster[] = { boss1, boss2, boss3, boss4 };
 		Scanner sc = new Scanner(System.in);
 		HuntingGround hunt = new HuntingGround();
-
+		
+		System.out.println("****************************");
 		System.out.println(m.monster_name + "과의 전투를 시작합니다.");
 		while (true) {
 			System.out.println(h.name + "의 공격입니다.");
@@ -41,6 +42,7 @@ class BossMonster extends Monster {
 				System.out.println(m.monster_name + "을 처치하여 " + m.monster_money + "의 돈을 획득하였습니다.");
 				if (i == 4) {
 					System.out.println("모든 보스를 격파하였습니다. 축하합니다.");
+					System.out.println("****************************");
 					break;
 				}
 				System.out.println("다음 전투를 진행 합니다.");
@@ -56,6 +58,7 @@ class BossMonster extends Monster {
 			// 히어로 hp가 0이 되었을 경우 전투 while문을 종료하고, 경험치 증가 시키는 부분
 			if (h.hp <= 0) {
 				System.out.println(h.name + "체력이 0이되어 보스전을 종료합니다.");
+				System.out.println("****************************");
 				break;
 			}
 		}
