@@ -46,6 +46,8 @@ class TrainingRoom extends HuntingGround {
 				// 1번 선택시 다음 몬스터와 전투
 				// 재귀함수를 통해 다음 배열의 몬스터와 전투 로직
 				if (sc.nextInt() == 1) {
+					if (i == 3)
+						break;
 					battle(h, Trainig_monster[i++], i++);
 					// 모든 전투가 끝나서 return될때 각 재귀단계가 종료되는 break문
 					break;
