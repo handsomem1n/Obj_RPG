@@ -12,7 +12,8 @@ public class Main {
 		System.out.println("2. 마법사");
 		System.out.println("3. 도적");
 		System.out.println("4. 운영자");
-		System.out.printf("직업의 번호를 입력하세요. : ");
+		System.out.printf("직업의 번호를 입력하세요. : \n");
+		System.out.println("***********************");
 		int num = sc.nextInt();
 
 		Hero h = null;
