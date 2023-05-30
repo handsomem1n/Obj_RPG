@@ -48,8 +48,11 @@ class BossMonster extends Monster {
 					System.out.printf("마을 촌장 : %s(이/가) 마을을 구했다 !!!", h.name);
 					System.out.print("\n");
 					System.out.printf("마을 어르신1 : 정말 대단해 %s !!!!", h.name);
+					System.out.print("\n");
 					System.out.printf("마을 어르신2 : 우리에게 평화가 찾아왔다!!");
+					System.out.print("\n");
 					System.out.printf("마을 사람들 : 고마워 %s !!", h.name);
+					System.out.print("\n");
 					break;
 				}
 				System.out.println("*********************");
