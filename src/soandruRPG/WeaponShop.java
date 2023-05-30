@@ -16,7 +16,7 @@ public class WeaponShop {
 		this.weapons.add(WeaponFactory.createRogueWeapon2());
 	}
 
-	public void buyWeapon(Hero hero, String weaponName) {
+	public void buyWeapon(Hero h, String weaponName) {
 		Weapon weaponToBuy = null; // 에러 방지의 일환 예외 처리
 		for (Weapon weapon : weapons) {
 			if (weapon.getName().equals(weaponName)) {
@@ -25,9 +25,9 @@ public class WeaponShop {
 			}
 		}
 		if (weaponToBuy != null) {
-			if (hero.getMoney() >= weaponToBuy.getPrice()) {
-				hero.setMoney(hero.getMoney() - weaponToBuy.getPrice());
-				System.out.println(weaponName + " 구매 성공! 잔여 액수: " + hero.getMoney());
+			if (h.getMoney() >= weaponToBuy.getPrice()) {
+				h.setMoney(h.getMoney() - weaponToBuy.getPrice());
+				System.out.println(weaponName + " 구매 성공! 잔여 액수: " + h.getMoney());
 				System.out.println("무기가 장착되었습니다.\n");
 				System.out.println("****************************");
 			} else {
