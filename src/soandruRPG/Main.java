@@ -11,9 +11,7 @@ public class Main {
 		System.out.println("1. 전사");
 		System.out.println("2. 마법사");
 		System.out.println("3. 도적");
-		System.out.println("4. 운영자");
-		System.out.printf("직업의 번호를 입력하세요. : \n");
-		System.out.println("***********************");
+		System.out.printf("직업의 번호를 입력하세요. : ");
 		int num = sc.nextInt();
 
 		Hero h = null;
@@ -21,6 +19,7 @@ public class Main {
 		switch (num) {
 		case 1:
 			// 전사 생성
+			System.out.println("*********************");
 			System.out.println("전사가 선택되었습니다.");
 			System.out.print("영웅의 이름을 입력하세요. : ");
 			name = sc.next();
@@ -29,6 +28,7 @@ public class Main {
 
 		case 2:
 			// 마법사 생성
+			System.out.println("*********************");
 			System.out.println("마법사가 선택되었습니다.");
 			System.out.print("영웅의 이름을 입력하세요. : ");
 			name = sc.next();
@@ -37,6 +37,7 @@ public class Main {
 
 		case 3:
 			// 도적 생성
+			System.out.println("*********************");
 			System.out.println("도적이 선택되었습니다.");
 			System.out.print("영웅의 이름을 입력하세요. : ");
 			name = sc.next();
@@ -49,6 +50,7 @@ public class Main {
 			name = sc.next();
 			h = new OperatorHero(name);
 		}
+		System.out.println("*********************");
 		System.out.println("이름이 입력되었습니다.");
 		System.out.println("게임에 입장하였습니다.");
 
@@ -71,16 +73,17 @@ public class Main {
 			System.out.println("5. 무기 상점");
 			System.out.println("6. 요리실");
 			System.out.println("7. 던전");
+			System.out.println("*********************");
 			System.out.printf("입장할 장소를 입력하세요. : ");
 			num = sc.nextInt();
 			if (num == 1) {
-				System.out.println("****************************");
+				System.out.println("*********************");
 				System.out.println("사냥터에 입장하였습니다.");
+				System.out.println("1. 타락한 들쥐");
+				System.out.println("2. 타락한 불독");
+				System.out.println("3. 타락한 늑대");
+				System.out.println("4. 타락한 곰");
 				System.out.println("몬스터를 선택하세요: ");
-				System.out.println("1. 너구리");
-				System.out.println("2. 살쾡이");
-				System.out.println("3. 두꺼비");
-				System.out.println("4. 호랑이");
 				int monsterChoice = sc.nextInt();
 				// Create Monster Based on User Input
 				Monster chosenMonster;
