@@ -40,13 +40,13 @@ public class cooking {
 		}
 		System.out.println(h.inventory);
 		System.out.println("들쥐의 꼬리 스튜, 불독 뼈 탕, 늑대고기 스테이크, 곰 발바닥 찜");
-		System.out.println("만약 요리를 만들고 싶지 않다면 '만들지 않기'를 입력해 주세요");
-		System.out.print("원하시는 메뉴를 골라주세요: ");
+		System.out.println("만약 요리를 만들고 싶지 않다면 '만들지 않기'를 입력해 주세요.");
+		System.out.print("원하시는 메뉴를 골라주세요. : ");
 
 		String ingredient = null;
 		String menu = sc.nextLine();
 		if (menu.equals("들쥐의 꼬리 스튜")) {
-			ingredient = "들쥐의 ";
+			ingredient = "들쥐의 꼬리";
 		} else if (menu.equals("불독 뼈 탕")) {
 			ingredient = "불독의 뼈";
 		} else if (menu.equals("늑대고기 스테이크")) {
@@ -65,7 +65,7 @@ public class cooking {
 			return;
 		}
 //		int quantity = getInventoryQuantity(ingredient);
-		System.out.println(ingredient + ": " + h.inventory.get(ingredient) + "개 있습니다.");
+		System.out.println(ingredient + "가 " + h.inventory.get(ingredient) + "개 있습니다.");
 		h.inventory.put(ingredient, h.inventory.get(ingredient) - 1);
 		System.out.println(h.inventory);
 		h.total_hp += eating.get(ingredient);
