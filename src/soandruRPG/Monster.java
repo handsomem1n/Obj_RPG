@@ -29,7 +29,7 @@ class Monster1 extends Monster {
 		monster_level = 1;
 		monster_experience = 10;
 		monster_money = 10;
-		item = "들쥐의 리꼬리";
+		item = "들쥐의 꼬리";
 	}
 }
 
