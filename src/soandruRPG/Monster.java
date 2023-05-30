@@ -87,7 +87,7 @@ class Monster3 extends Monster {
 
 class Training_Monster3 extends Monster {
 	public Training_Monster3() {
-		monster_name = "강화된 타락한대늑대";
+		monster_name = "강화된 타락한 늑대";
 		monster_hp = 4500;
 		monster_defense = 45;
 		monster_power = 300;
