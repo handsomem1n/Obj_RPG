@@ -55,7 +55,7 @@ public class Main {
 		System.out.println("게임에 입장하였습니다.");
 
 		System.out.println("*********************");
-		System.out.println("현재  Hero 의 이름 : " + h.name);
+		System.out.println("현재  Hero의 이름 : " + h.name);
 		System.out.println("현재 " + h.name + "의 레벨 : " + h.level);
 		System.out.println("현재 " + h.name + "의 힘 : " + h.power);
 		System.out.println("현재 " + h.name + "의 방어력 : " + h.defense);
@@ -83,7 +83,7 @@ public class Main {
 				System.out.println("2. 타락한 불독");
 				System.out.println("3. 타락한 늑대");
 				System.out.println("4. 타락한 곰");
-				System.out.println("몬스터를 선택하세요: ");
+				System.out.println("몬스터를 선택하세요. : ");
 				int monsterChoice = sc.nextInt();
 				// Create Monster Based on User Input
 				Monster chosenMonster;
