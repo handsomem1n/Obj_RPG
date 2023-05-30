@@ -55,7 +55,7 @@ class Monster2 extends Monster {
 		monster_level = 5;
 		monster_experience = 50;
 		monster_money = 30;
-		item = "불독의 뼈뼈";
+		item = "불독의 뼈";
 	}
 }
 
